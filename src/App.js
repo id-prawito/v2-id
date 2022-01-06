@@ -5,7 +5,7 @@ function App() {
         <div className="App">
             <h1>
                 React App Axios GH-pages framer-motion rc-tabs react-icons
-                react-intersection-observer
+                react-intersection-observer react-router-dom react-scroll
             </h1>
         </div>
     );
