@@ -88,7 +88,7 @@ const Project = () => {
                         <div className="big_heading">
                             Some Things I've Built
                         </div>
-                        <h1>View the archive of Github 1 API</h1>
+                        <h1>View the archive of Github API</h1>
                     </motion.div>
                     <motion.div variants={item_nya}>
                         <div className="content_repo">
