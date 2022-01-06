@@ -29,12 +29,12 @@ const Project = () => {
             setLoading(true);
             try {
                 const response = await axios(
-                    "https://api.github.com/users/id-prawito/repos",
-                    {
-                        // headers: {
-                        //     Authorization: `Bearer ${process.env.REACT_APP_API}`,
-                        // },
-                    }
+                    "https://api.github.com/users/id-prawito/repos"
+                    // {
+                    //     headers: {
+                    //         Authorization: `Bearer ${process.env.REACT_APP_API}`,
+                    //     },
+                    // }
                 );
                 setRepo(response.data);
             } catch {
