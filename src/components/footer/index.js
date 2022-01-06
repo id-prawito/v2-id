@@ -11,7 +11,6 @@ const Footer = () => {
     useEffect(() => {
         const getList = async () => {
             try {
-                // const token = process.env.REACT_APP_API;
                 const response = await axios(
                     "https://api.github.com/users/id-prawito/repos",
                     {
