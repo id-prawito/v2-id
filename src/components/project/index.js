@@ -28,10 +28,14 @@ const Project = () => {
         const getList = async () => {
             setLoading(true);
             try {
-                const token = process.env.REACT_APP_API;
+                // const token = process.env.REACT_APP_API;
                 const response = await axios(
                     "https://api.github.com/users/id-prawito/repos",
-                    { headers: { Authorization: `Bearer ${token}` } }
+                    {
+                        headers: {
+                            Authorization: `Bearer ${process.env.REACT_APP_API}`,
+                        },
+                    }
                 );
                 setRepo(response.data);
             } catch {
