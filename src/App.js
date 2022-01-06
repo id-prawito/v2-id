@@ -6,7 +6,7 @@ function App() {
             <h1>
                 React App Axios GH-pages framer-motion rc-tabs react-icons
                 react-intersection-observer react-router-dom react-scroll
-                react-tilt sass styled-components
+                react-tilt sass styled-components structure folder
             </h1>
         </div>
     );
