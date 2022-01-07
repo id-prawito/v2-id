@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 
 const Project = () => {
     const [repo, setRepo] = useState([]);
-    const [visible, setVisible] = useState(3);
+    const [visible_item, setVisible] = useState(3);
     const myRef = useRef(null);
 
     const showMoreItems = () => {
@@ -36,10 +36,12 @@ const Project = () => {
                     //     },
                     // }
                 );
+                // console.log(response.data);
                 setRepo(response.data);
             } catch {
                 console.log("error");
             }
+            setLoading(false);
         };
         getList();
     }, []);
@@ -88,77 +90,82 @@ const Project = () => {
                         <div className="big_heading">
                             Some Things I've Built
                         </div>
-                        <h1>View the archive of Github API New</h1>
+                        <h1>View the archive of Github API</h1>
                     </motion.div>
-                    <motion.div variants={item_nya}>
+                    <motion.div>
                         <div className="content_repo">
                             {!isloading &&
                                 (repo.length !== 0
-                                    ? repo.slice(0, visible).map((item, i) => (
-                                          <div key={i} className="card_item">
-                                              <div className="item_icon">
-                                                  <div className="icon_folder">
-                                                      <FiFolder />
-                                                  </div>
-                                                  <div className="icon">
-                                                      <div className="icon_link-git">
-                                                          <a
-                                                              href={
-                                                                  item.html_url
-                                                              }
-                                                              target="_blank"
-                                                              rel="noopener noreferrer"
-                                                              className="links"
-                                                          >
-                                                              <FiGithub />
-                                                          </a>
-                                                          {item.homepage ===
-                                                              null ||
-                                                          "" ? null : (
-                                                              <Link
-                                                                  to={`//${item.homepage}`}
+                                    ? repo
+                                          .slice(0, visible_item)
+                                          .map((item, i) => (
+                                              <div
+                                                  key={i}
+                                                  className="card_item"
+                                              >
+                                                  <div className="item_icon">
+                                                      <div className="icon_folder">
+                                                          <FiFolder />
+                                                      </div>
+                                                      <div className="icon">
+                                                          <div className="icon_link-git">
+                                                              <a
+                                                                  href={
+                                                                      item.html_url
+                                                                  }
                                                                   target="_blank"
                                                                   rel="noopener noreferrer"
                                                                   className="links"
                                                               >
-                                                                  <FiExternalLink />
-                                                              </Link>
-                                                          )}
+                                                                  <FiGithub />
+                                                              </a>
+                                                              {item.homepage ===
+                                                                  null ||
+                                                              "" ? null : (
+                                                                  <Link
+                                                                      to={`//${item.homepage}`}
+                                                                      target="_blank"
+                                                                      rel="noopener noreferrer"
+                                                                      className="links"
+                                                                  >
+                                                                      <FiExternalLink />
+                                                                  </Link>
+                                                              )}
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div className="text_contect">
+                                                      <h3 className="item_title">
+                                                          <a
+                                                              href="https://id-prawito.github.io/pokedex-id/"
+                                                              target="_blank"
+                                                              rel="noopener noreferrer"
+                                                          >
+                                                              {item.name}
+                                                          </a>
+                                                      </h3>
+                                                      <div className="item_description">
+                                                          <p>
+                                                              {item.description ===
+                                                              null
+                                                                  ? "Decription not exist"
+                                                                  : `${item.description}`}
+                                                          </p>
+                                                      </div>
+                                                      <div className="item_tech">
+                                                          <div className="text_list">
+                                                              {item.language}
+                                                          </div>
                                                       </div>
                                                   </div>
                                               </div>
-                                              <div className="text_contect">
-                                                  <h3 className="item_title">
-                                                      <a
-                                                          href="https://id-prawito.github.io/pokedex-id/"
-                                                          target="_blank"
-                                                          rel="noopener noreferrer"
-                                                      >
-                                                          {item.name}
-                                                      </a>
-                                                  </h3>
-                                                  <div className="item_description">
-                                                      <p>
-                                                          {item.description ===
-                                                          null
-                                                              ? "Decription not exist"
-                                                              : `${item.description}`}
-                                                      </p>
-                                                  </div>
-                                                  <div className="item_tech">
-                                                      <div className="text_list">
-                                                          {item.language}
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      ))
+                                          ))
                                     : null)}
                         </div>
                     </motion.div>
 
                     <motion.div variants={item_nya} className="button_hero">
-                        {repo.length <= visible ? (
+                        {repo.length <= visible_item ? (
                             <button onClick={showLessItems}>
                                 <div className="button_my-course">
                                     <div className="item_content">
