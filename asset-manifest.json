@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/v2-id/static/css/main.a5efacf6.css",
-    "main.js": "/v2-id/static/js/main.de7f75e1.js",
+    "main.css": "/v2-id/static/css/main.eda3323c.css",
+    "main.js": "/v2-id/static/js/main.e888bf67.js",
     "static/media/disney-plus.PNG": "/v2-id/static/media/disney-plus.ff0bfb2909b9be7dd5b2.PNG",
     "static/media/cv_prawito.pdf": "/v2-id/static/media/cv_prawito.62769c46a2db417ecdd2.pdf",
     "static/media/spk-promethee.PNG": "/v2-id/static/media/spk-promethee.96412893015717ab26bd.PNG",
@@ -25,11 +25,11 @@
     "static/media/javascript.svg": "/v2-id/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
     "static/media/firebase.svg": "/v2-id/static/media/firebase.82a35fc0b90d124a8e7333989f767fd3.svg",
     "static/media/vueJs.svg": "/v2-id/static/media/vueJs.f1fd23be1db9361fbcd81511fe862b08.svg",
-    "main.a5efacf6.css.map": "/v2-id/static/css/main.a5efacf6.css.map",
-    "main.de7f75e1.js.map": "/v2-id/static/js/main.de7f75e1.js.map"
+    "main.eda3323c.css.map": "/v2-id/static/css/main.eda3323c.css.map",
+    "main.e888bf67.js.map": "/v2-id/static/js/main.e888bf67.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5efacf6.css",
-    "static/js/main.de7f75e1.js"
+    "static/css/main.eda3323c.css",
+    "static/js/main.e888bf67.js"
   ]
 }
