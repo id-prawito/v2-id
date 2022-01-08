@@ -12,7 +12,8 @@ export const HeroSite = styled.section`
     padding: 0px;
 
     ${devices.smartphone} {
-        min-height: 100vh;
+        min-height: 0px;
+        padding: 40px 0px;
     }
 
     .hero_content {

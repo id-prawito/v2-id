@@ -11,7 +11,7 @@ export const ContactSite = styled.section`
     padding: 0px;
 
     ${devices.smartphone} {
-        min-height: 100vh;
+        min-height: 0px;
         justify-content: center;
     }
 
@@ -51,7 +51,7 @@ export const ContactSite = styled.section`
         padding: 0 100px;
 
         ${devices.smartphone} {
-            padding: 0px 25px;
+            padding: 50px 25px;
         }
     }
 

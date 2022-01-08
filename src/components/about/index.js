@@ -197,122 +197,160 @@ const About = () => {
                         Tech Stack
                     </motion.div>
                     <div className="tech_content">
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={html5} alt="html_logo" />
                                 <div className="text_tech">HTML 5</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={css} alt="css_logo" />
                                 <div className="text_tech">CSS</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={javascript} alt="javascript_logo" />
                                 <div className="text_tech">JavaScript</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={typescript} alt="html_logo" />
                                 <div className="text_tech">TypeScript</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={github} alt="github_logo" />
                                 <div className="text_tech">Github</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={reactJs} alt="ReactJS_logo" />
                                 <div className="text_tech">React JS</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={visualCode} alt="Visual_logo" />
                                 <div className="text_tech">Visual Code</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={scss} alt="Scss_logo" />
                                 <div className="text_tech">Scss</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={mySQL} alt="MySQL_logo" />
                                 <div className="text_tech">MySQL</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={figma} alt="Figma_logo" />
                                 <div className="text_tech">Figma</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={php} alt="PHP_logo" />
                                 <div className="text_tech">PHP</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={nodeJS} alt="NodeJS_logo" />
                                 <div className="text_tech">Node JS</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={mongoDB} alt="MongoDB_logo" />
                                 <div className="text_tech">MongoDB</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={firebase} alt="Firebase_logo" />
                                 <div className="text_tech">Firebase</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={illustrator} alt="Illustrator_logo" />
                                 <div className="text_tech">Illustrator</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={photoshop} alt="Photoshop_logo" />
                                 <div className="text_tech">Photoshop</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={nextJS} alt="NextJS_logo" />
                                 <div className="text_tech">Next JS</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={sqlite} alt="Sqlite_logo" />
                                 <div className="text_tech">Sqlite</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={git} alt="Git_logo" />
                                 <div className="text_tech">Git</div>
                             </div>
                         </motion.div>
-                        <motion.div variants={item_card}>
-                            <div className="card_tech tool-card-Development">
+
+                        <motion.div variants={item_card} className="pembungkus">
+                            <div className="card_background"></div>
+                            <div className="card_contentnya">
                                 <img src={vueJs} alt="VueJs_logo" />
                                 <div className="text_tech">Vue JS</div>
                             </div>

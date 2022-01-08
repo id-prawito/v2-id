@@ -12,7 +12,8 @@ export const AboutSite = styled.section`
     justify-content: center;
 
     ${devices.smartphone} {
-        min-height: 460vh;
+        min-height: 0px;
+        padding: 40px 0px;
     }
 
     .pembungkus_about {
@@ -212,10 +213,6 @@ export const AboutSite = styled.section`
         width: 100%;
         gap: 40px;
 
-        /* ${devices.smartphone} {
-            display: none;
-        } */
-
         .tech_heading {
             font-size: 20px;
             font-weight: 600;
@@ -225,8 +222,38 @@ export const AboutSite = styled.section`
                     : "var(--dark-text-white)"};
         }
 
-        .tool-card-Development {
-            &::after {
+        .tech_content {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            width: 1000px;
+            gap: 15px;
+            row-gap: 20px;
+
+            ${devices.smartphone} {
+                grid-template-columns: repeat(2, auto);
+                width: 100%;
+            }
+
+            .pembungkus {
+                cursor: pointer;
+                transition: 350ms ease-in-out;
+                height: 120px;
+                width: 100%;
+
+                &:hover {
+                    .card_background {
+                        transition: 350ms ease-in-out;
+                        transform: translateY(2px);
+                    }
+
+                    .card_contentnya img {
+                        transition: 350ms ease-in-out;
+                        transform: rotate(4deg) scale(1.4);
+                    }
+                }
+            }
+
+            .card_background {
                 background: linear-gradient(
                     109.09deg,
                     ${({ theme: { theme } }) =>
@@ -238,51 +265,32 @@ export const AboutSite = styled.section`
                                 : "var(--darkCardComponent)"}
                         100%
                 );
-            }
-        }
-
-        .tech_content {
-            display: grid;
-            grid-template-columns: repeat(5, auto);
-            width: 1000px;
-            gap: 10px;
-            row-gap: 20px;
-
-            ${devices.smartphone} {
-                grid-template-columns: repeat(2, auto);
                 width: 100%;
+                height: calc(100% + 5px);
+                margin-bottom: -125px;
+                border-radius: 12px;
+                z-index: -2;
+                position: relative;
+                transition: 350ms ease-in-out;
             }
 
-            .card_tech {
-                background-color: ${({ theme: { theme } }) =>
+            .card_contentnya {
+                background: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--darkCardComponent)"
                         : "var(--lightCardComponent)"};
-                border-radius: 10px;
                 height: 120px;
+                width: 100%;
+                border-radius: 10px;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-between;
+                z-index: -1;
+                position: relative;
                 flex-direction: column;
-                width: 190px;
+                gap: 10px;
+                transition: 350ms ease-in-out;
                 padding: 20px;
-                cursor: pointer;
-
-                ${devices.smartphone} {
-                    width: 130px;
-                }
-
-                &:hover {
-                    img {
-                        transition: 350ms ease-in-out;
-                        transform: rotate(4deg) scale(1.4);
-                    }
-
-                    &::after {
-                        transition: 350ms ease-in-out;
-                        transform: scaleY(1.05);
-                    }
-                }
 
                 img {
                     max-width: 50px;
@@ -293,20 +301,6 @@ export const AboutSite = styled.section`
                 .text_tech {
                     font-size: 14px;
                     font-weight: 500;
-                }
-
-                &::after {
-                    content: "";
-                    width: 190px;
-                    height: 105px;
-                    border-radius: 10px;
-                    position: absolute;
-                    z-index: -1;
-                    transition: 350ms ease-in-out;
-
-                    ${devices.smartphone} {
-                        width: 130px;
-                    }
                 }
             }
         }

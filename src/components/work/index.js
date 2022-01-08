@@ -24,7 +24,7 @@ const Work = () => {
             scale: 1,
             transition: {
                 delayChildren: 0.8,
-                staggerChildren: 1.0,
+                staggerChildren: 0.6,
             },
         },
     };
