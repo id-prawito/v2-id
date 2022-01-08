@@ -79,7 +79,7 @@ export const ProjectSite = styled.section`
         gap: 15px;
 
         ${devices.smartphone} {
-            grid-template-columns: repeat(1, auto);
+            grid-template-columns: repeat(2, auto);
         }
 
         .card_item {
@@ -101,6 +101,8 @@ export const ProjectSite = styled.section`
 
             ${devices.smartphone} {
                 min-width: 100%;
+                padding: 20px;
+                justify-content: flex-start;
             }
 
             &:hover {
@@ -116,12 +118,19 @@ export const ProjectSite = styled.section`
 
                 .icon {
                     color: #fff;
-
                     font-size: 20px;
+
+                    ${devices.smartphone} {
+                        font-size: 16px;
+                    }
 
                     .icon_link-git {
                         display: flex;
                         gap: 15px;
+
+                        ${devices.smartphone} {
+                            font-size: 16px;
+                        }
 
                         a {
                             &:hover {
@@ -135,25 +144,37 @@ export const ProjectSite = styled.section`
                     color: ${({ theme: { theme } }) =>
                         theme === themeList.light ? "#fff" : "#7c3aed"};
                     font-size: 28px;
+
+                    ${devices.smartphone} {
+                        font-size: 18px;
+                    }
                 }
             }
 
             .text_contect {
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
-                justify-content: flex-start;
+                /* justify-content: flex-start; */
+                gap: 10px;
                 width: 100%;
+
+                ${devices.smartphone} {
+                    justify-content: space-between;
+                    height: 100%;
+                }
 
                 .item_title {
                     color: #fff;
                     font-weight: 600;
                     font-size: 18px;
                     cursor: pointer;
-                    margin-top: -8px;
 
                     &:hover {
                         color: #7c3aed;
+                    }
+
+                    ${devices.smartphone} {
+                        font-size: 14px;
                     }
                 }
 
@@ -163,6 +184,10 @@ export const ProjectSite = styled.section`
                     font-size: 14px;
                     height: 70px;
 
+                    /* ${devices.smartphone} {
+                        display: none;
+                    } */
+
                     p {
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 4;
@@ -171,6 +196,10 @@ export const ProjectSite = styled.section`
                         text-align: left;
                         text-overflow: ellipsis;
                         white-space: normal;
+
+                        ${devices.smartphone} {
+                            font-size: 12px;
+                        }
                     }
                 }
 

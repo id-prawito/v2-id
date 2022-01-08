@@ -23,7 +23,7 @@ export const ExperienceSite = styled.section`
 
         ${devices.smartphone} {
             padding: 50px 25px;
-            height: 90vh;
+            height: 110vh;
         }
     }
 
@@ -157,6 +157,7 @@ export const ExperienceSite = styled.section`
                 .text_keterangan {
                     font-size: 14px;
                     width: 100%;
+                    line-height: 1.8;
                 }
 
                 li {
