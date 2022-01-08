@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
+import { devices } from "../../assets/scss/_respondTo";
+
 export const ContactSite = styled.section`
     display: flex;
     justify-content: flex-start;
@@ -7,6 +9,11 @@ export const ContactSite = styled.section`
     align-items: center;
     min-height: 40vh;
     padding: 0px;
+
+    ${devices.smartphone} {
+        min-height: 100vh;
+        justify-content: center;
+    }
 
     .contact_content {
         display: flex;
@@ -30,6 +37,10 @@ export const ContactSite = styled.section`
         line-height: 1.8;
         text-align: center;
 
+        ${devices.smartphone} {
+            font-size: 14px;
+        }
+
         color: ${({ theme: { theme } }) =>
             theme === themeList.light
                 ? "var(--light-text-black)"
@@ -38,6 +49,10 @@ export const ContactSite = styled.section`
 
     .hero_container {
         padding: 0 100px;
+
+        ${devices.smartphone} {
+            padding: 0px 25px;
+        }
     }
 
     .big_heading {
@@ -48,6 +63,10 @@ export const ContactSite = styled.section`
             theme === themeList.light
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
+
+        ${devices.smartphone} {
+            font-size: 30px;
+        }
     }
 
     .button_hero {
@@ -69,6 +88,11 @@ export const ContactSite = styled.section`
             transition: 0.3s all ease;
             cursor: pointer;
             font-size: 14px;
+
+            ${devices.smartphone} {
+                font-size: 12px;
+                padding: 10px 15px;
+            }
 
             &:hover {
                 transform: scale(1.05);

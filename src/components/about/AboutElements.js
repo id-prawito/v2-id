@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const AboutSite = styled.section`
     max-width: 930px;
@@ -10,17 +11,29 @@ export const AboutSite = styled.section`
     align-items: center;
     justify-content: center;
 
+    ${devices.smartphone} {
+        min-height: 460vh;
+    }
+
     .pembungkus_about {
         display: flex;
         gap: 80px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        ${devices.smartphone} {
+            padding: 0px 25px;
+        }
     }
 
     .about_content {
         display: flex;
         gap: 20px;
+
+        ${devices.smartphone} {
+            flex-direction: column;
+        }
 
         h1 {
             color: #7c3aed;
@@ -32,8 +45,12 @@ export const AboutSite = styled.section`
     .content_about {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         width: 50%;
+
+        ${devices.smartphone} {
+            width: 100%;
+        }
 
         p {
             line-height: 1.8;
@@ -53,9 +70,17 @@ export const AboutSite = styled.section`
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
 
+        ${devices.smartphone} {
+            font-size: 30px;
+        }
+
         span {
             font-size: 40px;
             color: #7c3aed;
+
+            ${devices.smartphone} {
+                font-size: 30px;
+            }
         }
     }
 
@@ -75,6 +100,12 @@ export const AboutSite = styled.section`
             svg {
                 font-size: 20px;
                 color: #7c3aed;
+            }
+
+            span {
+                color: #6b7280;
+                font-size: 15px;
+                font-weight: 600;
             }
         }
     }
@@ -111,6 +142,10 @@ export const AboutSite = styled.section`
         grid-template-areas: "myArea myArea2";
         gap: 25px;
         width: 50%;
+
+        ${devices.smartphone} {
+            width: 100%;
+        }
 
         .myArea2 {
             grid-area: myArea2;
@@ -177,6 +212,10 @@ export const AboutSite = styled.section`
         width: 100%;
         gap: 40px;
 
+        /* ${devices.smartphone} {
+            display: none;
+        } */
+
         .tech_heading {
             font-size: 20px;
             font-weight: 600;
@@ -209,6 +248,11 @@ export const AboutSite = styled.section`
             gap: 10px;
             row-gap: 20px;
 
+            ${devices.smartphone} {
+                grid-template-columns: repeat(2, auto);
+                width: 100%;
+            }
+
             .card_tech {
                 background-color: ${({ theme: { theme } }) =>
                     theme === themeList.light
@@ -223,6 +267,10 @@ export const AboutSite = styled.section`
                 width: 190px;
                 padding: 20px;
                 cursor: pointer;
+
+                ${devices.smartphone} {
+                    width: 130px;
+                }
 
                 &:hover {
                     img {
@@ -255,6 +303,10 @@ export const AboutSite = styled.section`
                     position: absolute;
                     z-index: -1;
                     transition: 350ms ease-in-out;
+
+                    ${devices.smartphone} {
+                        width: 130px;
+                    }
                 }
             }
         }

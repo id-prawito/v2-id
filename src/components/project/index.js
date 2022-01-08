@@ -92,7 +92,7 @@ const Project = () => {
                         </div>
                         <h1>View the archive of Github API</h1>
                     </motion.div>
-                    <motion.div>
+                    <motion.div variants={item_nya}>
                         <div className="content_repo">
                             {!isloading &&
                                 (repo.length !== 0

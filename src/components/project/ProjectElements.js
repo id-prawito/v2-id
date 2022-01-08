@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const ProjectSite = styled.section`
     display: flex;
@@ -12,6 +13,10 @@ export const ProjectSite = styled.section`
     .project_container {
         padding: 130px 100px;
         width: 100%;
+
+        ${devices.smartphone} {
+            padding: 0px 25px;
+        }
     }
 
     .item_nya {
@@ -44,12 +49,20 @@ export const ProjectSite = styled.section`
                 font-size: 14px;
                 font-weight: 500;
                 letter-spacing: 1.3px;
+
+                ${devices.smartphone} {
+                    letter-spacing: 0px;
+                }
             }
 
             .big_heading {
                 margin: 0px;
                 font-size: 40px;
                 font-weight: 600;
+
+                ${devices.smartphone} {
+                    font-size: 30px;
+                }
 
                 color: ${({ theme: { theme } }) =>
                     theme === themeList.light
@@ -64,6 +77,10 @@ export const ProjectSite = styled.section`
         grid-template-columns: repeat(3, auto);
         width: 100%;
         gap: 15px;
+
+        ${devices.smartphone} {
+            grid-template-columns: repeat(1, auto);
+        }
 
         .card_item {
             padding: 2rem 1.75rem;
@@ -81,6 +98,10 @@ export const ProjectSite = styled.section`
             border-radius: 6px;
             gap: 20px;
             min-width: 320px;
+
+            ${devices.smartphone} {
+                min-width: 100%;
+            }
 
             &:hover {
                 transform: translateY(-7px);

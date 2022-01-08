@@ -88,21 +88,37 @@ const About = () => {
                         </p>
                         <ul className="text_skill">
                             <li>
-                                <FaCheckCircle /> JavaScript (Node & Client
-                                Side)
+                                <div className="icon">
+                                    <FaCheckCircle />
+                                </div>
+                                <span>JavaScript (Node & Client Side)</span>
                             </li>
                             <li>
-                                <FaCheckCircle /> TypeScript, PHP
+                                <div className="icon">
+                                    <FaCheckCircle />
+                                </div>
+                                <span>TypeScript, PHP</span>
                             </li>
                             <li>
-                                <FaCheckCircle /> NoSQL (MongoDB & MySQL)
+                                <div className="icon">
+                                    <FaCheckCircle />
+                                </div>
+                                <span>NoSQL (MongoDB & MySQL)</span>
                             </li>
                             <li>
-                                <FaCheckCircle /> SQL (Postgre & Sqlite)
+                                <div className="icon">
+                                    <FaCheckCircle />
+                                </div>
+                                <span>SQL (Postgre & Sqlite)</span>
                             </li>
                             <li>
-                                <FaCheckCircle /> Design (Figma, CorelDraw, AI &
-                                Adobe Photoshop)
+                                <div className="icon">
+                                    <FaCheckCircle />
+                                </div>
+                                <span>
+                                    Design (Figma, CorelDraw, AI & Adobe
+                                    Photoshop)
+                                </span>
                             </li>
                         </ul>
                     </motion.div>

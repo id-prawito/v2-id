@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_respondTo";
 import themeList from "../../config/themeList";
 
 export const ExperienceSite = styled.section`
@@ -10,11 +11,19 @@ export const ExperienceSite = styled.section`
     padding: 0px;
     max-width: 800px;
 
+    ${devices.smartphone} {
+        min-height: 0px;
+    }
+
     .content {
         display: flex;
         flex-direction: column;
         gap: 30px;
         width: 100%;
+
+        ${devices.smartphone} {
+            padding: 50px 25px;
+        }
     }
 
     .expe_content {
@@ -32,12 +41,16 @@ export const ExperienceSite = styled.section`
                 theme === themeList.light
                     ? "var(--light-text-black)"
                     : "var(--dark-text-white)"};
+
+            ${devices.smartphone} {
+                font-size: 30px;
+            }
         }
 
         h1 {
             color: #7c3aed;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 500;
         }
     }
 
@@ -45,18 +58,28 @@ export const ExperienceSite = styled.section`
         border: none !important;
         width: 100%;
         height: 300px;
+
+        ${devices.smartphone} {
+            height: 100%;
+            gap: 20px;
+        }
     }
     .rc-tabs-tab {
         padding: 5px;
         text-transform: capitalize;
         background: transparent;
-        /* color: #8892b0; */
         color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#7c3aed" : "#8892b0"};
         padding: 8px 30px;
         font-size: 14px;
         border-right: 2px solid #233554;
         border-radius: 6px 0px 0px 6px;
+
+        ${devices.smartphone} {
+            border-radius: 0px 0px 0px 0px;
+            border-bottom: 2px solid #233554;
+            border-right: 0px;
+        }
 
         &:hover {
             background-color: ${({ theme: { theme } }) =>
@@ -81,6 +104,11 @@ export const ExperienceSite = styled.section`
         background: transparent;
         width: 500px;
         padding: 10px 30px;
+
+        ${devices.smartphone} {
+            width: 100%;
+            padding: 0px;
+        }
     }
     .rc-tabs-content {
         margin: auto;

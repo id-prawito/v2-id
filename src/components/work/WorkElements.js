@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import themeList from "../../config/themeList";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const WorkSite = styled.section`
     display: flex;
@@ -8,6 +9,10 @@ export const WorkSite = styled.section`
     align-items: flex-start;
     min-height: 165vh;
     padding: 0px;
+
+    ${devices.smartphone} {
+        display: none;
+    }
 
     .work_content {
         display: flex;

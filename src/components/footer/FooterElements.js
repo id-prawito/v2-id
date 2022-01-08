@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_respondTo";
 import themeList from "../../config/themeList";
 
 export const FooterSite = styled.footer`
@@ -13,6 +14,10 @@ export const FooterSite = styled.footer`
 
     .footer_media-social {
         display: none;
+
+        ${devices.smartphone} {
+            display: initial;
+        }
     }
 
     .footer_item {

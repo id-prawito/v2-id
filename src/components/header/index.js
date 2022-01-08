@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from "react";
 import logoSite from "../../assets/img/logo_site.png";
 import { FaEllipsisV, FaInstagram } from "react-icons/fa";
 import { FiGithub, FiTwitter, FiLinkedin, FiPhone } from "react-icons/fi";
-import "./header.scss";
-import { HeaderContainer, HeaderSite, Item, NavLinks } from "./HeaderElements";
+import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import ThemeSwitcher from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 
@@ -12,8 +11,8 @@ const Header = () => {
     useEffect(() => {
         const shrinkHeader = () => {
             if (
-                document.body.scrollTop > 150 ||
-                document.documentElement.scrollTop > 150
+                document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
             ) {
                 headerRef.current.classList.add("shrink");
             } else {
@@ -63,6 +62,9 @@ const Header = () => {
                                 className="logo__img"
                             />
                         </NavLinks>
+                        <motion.div variants={item_nya}>
+                            <ThemeSwitcher />
+                        </motion.div>
                     </div>
                     <motion.div
                         variants={container}
@@ -71,13 +73,9 @@ const Header = () => {
                         className="header__menu"
                     >
                         <motion.div variants={item_nya} className="closing">
-                            <ThemeSwitcher />
                             <div className="color_icon">
                                 <FaEllipsisV />
                             </div>
-                        </motion.div>
-
-                        <motion.div variants={item_nya} className="closing">
                             <div className="header__item">
                                 <div className="text_menu">
                                     <NavLinks
@@ -90,12 +88,12 @@ const Header = () => {
                                     </NavLinks>
                                 </div>
                             </div>
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
                         </motion.div>
 
                         <motion.div variants={item_nya} className="closing">
+                            <div className="color_icon">
+                                <FaEllipsisV />
+                            </div>
                             <div className="header__item">
                                 <div className="text_menu">
                                     <NavLinks
@@ -108,11 +106,11 @@ const Header = () => {
                                     </NavLinks>
                                 </div>
                             </div>
+                        </motion.div>
+                        <motion.div variants={item_nya} className="closing">
                             <div className="color_icon">
                                 <FaEllipsisV />
                             </div>
-                        </motion.div>
-                        <motion.div variants={item_nya} className="closing">
                             <div className="header__item">
                                 <div className="text_menu">
                                     <NavLinks
@@ -125,11 +123,11 @@ const Header = () => {
                                     </NavLinks>
                                 </div>
                             </div>
+                        </motion.div>
+                        <motion.div variants={item_nya} className="closing">
                             <div className="color_icon">
                                 <FaEllipsisV />
                             </div>
-                        </motion.div>
-                        <motion.div variants={item_nya} className="closing">
                             <div className="header__item">
                                 <div className="text_menu">
                                     <NavLinks
@@ -142,24 +140,25 @@ const Header = () => {
                                     </NavLinks>
                                 </div>
                             </div>
+                        </motion.div>
+
+                        <motion.div variants={item_nya} className="closing">
                             <div className="color_icon">
                                 <FaEllipsisV />
                             </div>
-                        </motion.div>
-                        <motion.div
-                            variants={item_nya}
-                            className="header__item"
-                        >
-                            <div className="resume">
-                                <a
-                                    href={require("../../assets/cv_prawito.pdf")}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Resume
-                                </a>
+                            <div className="header__item">
+                                <div className="resume">
+                                    <a
+                                        href={require("../../assets/cv_prawito.pdf")}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Resume
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
+
                         <MediaSocial variants={item_nya} />
                     </motion.div>
                 </div>
@@ -176,7 +175,7 @@ const MediaSocial = ({ variants }) => {
                 className="media_social"
                 orientation="left"
             >
-                <Item>
+                <ul className="item_media">
                     <li className="item_li">
                         <a
                             href="https://github.com/id-prawito"
@@ -227,14 +226,14 @@ const MediaSocial = ({ variants }) => {
                             <FiPhone />
                         </a>
                     </li>
-                </Item>
+                </ul>
             </motion.div>
             <motion.div
                 variants={variants}
                 className="media_social_right"
                 orientation="right"
             >
-                <Item>
+                <ul className="item_media">
                     <li className="item_li">
                         <a
                             href="https://github.com/bchiang7"
@@ -245,7 +244,7 @@ const MediaSocial = ({ variants }) => {
                             <FaInstagram />
                         </a>
                     </li>
-                </Item>
+                </ul>
             </motion.div>
         </>
     );

@@ -37,7 +37,7 @@ const Hero = () => {
                     <motion.div variants={item_nya} className="big_heading">
                         Prawito (Boy).
                     </motion.div>
-                    <motion.div variants={item_nya} className="big_heading">
+                    <motion.div variants={item_nya} className="big_heading_one">
                         I build things for the web.
                     </motion.div>
                     <motion.p variants={item_nya}>

@@ -3,9 +3,15 @@ import styled from "styled-components";
 import { FiSun, FiMoon } from "react-icons/fi";
 import ThemeContext from "./ThemeContext";
 import themeList from "./themeList";
+import { devices } from "../assets/scss/_respondTo";
 
 const ThemeSwitcherStyles = styled.div`
     padding: 0 10px;
+
+    ${devices.smartphone} {
+        padding: 0px;
+    }
+
     label {
         --gap: 5px;
         --size: 20px;
