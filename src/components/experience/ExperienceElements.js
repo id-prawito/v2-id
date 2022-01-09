@@ -23,7 +23,7 @@ export const ExperienceSite = styled.section`
 
         ${devices.smartphone} {
             padding: 50px 25px;
-            height: 110vh;
+            height: 90vh;
         }
     }
 

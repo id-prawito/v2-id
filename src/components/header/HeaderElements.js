@@ -43,6 +43,44 @@ export const HeaderContainer = styled.div`
         padding: 0px 25px;
     }
 
+    .menuIcon,
+    .closeIcon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-right: -10px;
+        svg {
+            color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#222B5F" : "#F3F1FE"};
+            width: 25px;
+            height: 25px;
+        }
+        &:hover {
+            background-color: #8080803b;
+            border-radius: 4px;
+        }
+    }
+    .closeIcon {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        &:hover {
+            background-color: #8080803b;
+            svg {
+                color: white;
+            }
+        }
+    }
+    .navOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #7227f3;
+        opacity: 0.2;
+    }
+
     .header {
         &__logo_link {
             display: flex;
@@ -97,6 +135,11 @@ export const HeaderContainer = styled.div`
             width: 100%;
             gap: 8px;
 
+            ${devices.smartphone} {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
             .resume {
                 display: flex;
                 align-items: center;
@@ -135,42 +178,48 @@ export const HeaderContainer = styled.div`
             list-style: none;
             height: 100%;
 
-            ${devices.smartphone} {
-                display: none;
-                /* display: flex; */
-                flex-direction: column;
-                justify-content: center;
-                height: 100%;
-                position: fixed;
-                z-index: 100;
-                width: 90%;
-                max-width: 250px;
-                top: 0;
-                right: 0%;
-                background-color: #c43434;
-                transform: translateX(100%);
-                transition: 0.3s ease transform;
+            nav.open {
+                ${devices.smartphone} {
+                    box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
+                    transform: translateX(0);
+                }
             }
 
-            ${devices.ipads} {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100vh;
-                position: fixed;
-                z-index: 100;
-                width: 90%;
-                max-width: 250px;
-                top: 0;
-                right: 0%;
-                background-color: #c43434;
-                transform: translateX(100%);
-                transition: 0.3s ease transform;
-            }
+            nav {
+                ${devices.smartphone} {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: fixed;
+                    width: 90%;
+                    max-width: 250px;
+                    top: 0;
+                    right: 0;
+                    background-color: #1a1d29;
+                    height: 100vh;
+                    z-index: 100;
+                    transform: translateX(100%);
+                    transition: 0.3s ease-in-out transform;
+                    overflow: hidden;
+                }
 
-            .closing {
-                display: flex;
-                align-items: center;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    ${devices.smartphone} {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
+                    li {
+                        .closing {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
             }
 
             .color_icon {
@@ -180,6 +229,10 @@ export const HeaderContainer = styled.div`
                     theme === themeList.light
                         ? "var(--light-text-black)"
                         : "var(--dark-text-white)"};
+
+                ${devices.smartphone} {
+                    display: none;
+                }
             }
         }
     }

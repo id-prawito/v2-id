@@ -1,7 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logoSite from "../../assets/img/logo_site.png";
 import { FaEllipsisV, FaInstagram } from "react-icons/fa";
-import { FiGithub, FiTwitter, FiLinkedin, FiPhone } from "react-icons/fi";
+import {
+    FiGithub,
+    FiTwitter,
+    FiLinkedin,
+    FiPhone,
+    FiMenu,
+    FiX,
+} from "react-icons/fi";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import ThemeSwitcher from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
@@ -45,6 +52,32 @@ const Header = () => {
         },
     };
 
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(
+        window.matchMedia("(max-width: 768px)").matches
+    );
+
+    useEffect(() => {
+        function disableScroll() {
+            document.body.style.overflow = "hidden";
+        }
+        function enableScroll() {
+            document.body.style.overflow = "";
+        }
+
+        if (isNavOpen) {
+            disableScroll();
+        } else {
+            enableScroll();
+        }
+    }, [isNavOpen]);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+        });
+    }, []);
+
     return (
         <HeaderSite ref={headerRef}>
             <HeaderContainer>
@@ -66,98 +99,165 @@ const Header = () => {
                             <ThemeSwitcher />
                         </motion.div>
                     </div>
+
+                    {isMobile && (
+                        <div
+                            className="menuIcon"
+                            tabIndex="0"
+                            role="button"
+                            onKeyDown={() => setIsNavOpen(true)}
+                            onClick={() => setIsNavOpen(true)}
+                        >
+                            <FiMenu />
+                        </div>
+                    )}
+
                     <motion.div
                         variants={container}
                         initial="hidden"
                         animate="visible"
                         className="header__menu"
                     >
-                        <motion.div variants={item_nya} className="closing">
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
-                            <div className="header__item">
-                                <div className="text_menu">
-                                    <NavLinks
-                                        to="about"
-                                        smooth
-                                        activeClass="active"
-                                        spy={true}
-                                    >
-                                        About
-                                    </NavLinks>
+                        <nav
+                            className={
+                                isMobile && isNavOpen ? "open" : undefined
+                            }
+                        >
+                            {isMobile && (
+                                <div
+                                    className="closeIcon"
+                                    tabIndex="0"
+                                    role="button"
+                                    onKeyDown={() => setIsNavOpen(false)}
+                                    onClick={() => setIsNavOpen(false)}
+                                >
+                                    <FiX />
                                 </div>
-                            </div>
-                        </motion.div>
+                            )}
 
-                        <motion.div variants={item_nya} className="closing">
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
-                            <div className="header__item">
-                                <div className="text_menu">
-                                    <NavLinks
-                                        to="experience"
-                                        smooth
-                                        activeClass="active"
-                                        spy={true}
+                            <ul>
+                                <li>
+                                    <motion.div
+                                        variants={item_nya}
+                                        className="closing"
                                     >
-                                        Experience
-                                    </NavLinks>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div variants={item_nya} className="closing">
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
-                            <div className="header__item">
-                                <div className="text_menu">
-                                    <NavLinks
-                                        to="work"
-                                        smooth
-                                        activeClass="active"
-                                        spy={true}
+                                        <div className="color_icon">
+                                            <FaEllipsisV />
+                                        </div>
+                                        <div className="header__item">
+                                            <div className="text_menu">
+                                                <NavLinks
+                                                    to="about"
+                                                    smooth
+                                                    activeClass="active"
+                                                    spy={true}
+                                                >
+                                                    About
+                                                </NavLinks>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </li>
+                                <li>
+                                    <motion.div
+                                        variants={item_nya}
+                                        className="closing"
                                     >
-                                        Work
-                                    </NavLinks>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div variants={item_nya} className="closing">
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
-                            <div className="header__item">
-                                <div className="text_menu">
-                                    <NavLinks
-                                        to="project"
-                                        smooth
-                                        activeClass="active"
-                                        spy={true}
+                                        <div className="color_icon">
+                                            <FaEllipsisV />
+                                        </div>
+                                        <div className="header__item">
+                                            <div className="text_menu">
+                                                <NavLinks
+                                                    to="experience"
+                                                    smooth
+                                                    activeClass="active"
+                                                    spy={true}
+                                                >
+                                                    Experience
+                                                </NavLinks>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </li>
+                                <li>
+                                    <motion.div
+                                        variants={item_nya}
+                                        className="closing"
                                     >
-                                        Project
-                                    </NavLinks>
-                                </div>
-                            </div>
-                        </motion.div>
+                                        <div className="color_icon">
+                                            <FaEllipsisV />
+                                        </div>
+                                        <div className="header__item">
+                                            <div className="text_menu">
+                                                <NavLinks
+                                                    to="work"
+                                                    smooth
+                                                    activeClass="active"
+                                                    spy={true}
+                                                >
+                                                    Work
+                                                </NavLinks>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </li>
+                                <li>
+                                    <motion.div
+                                        variants={item_nya}
+                                        className="closing"
+                                    >
+                                        <div className="color_icon">
+                                            <FaEllipsisV />
+                                        </div>
+                                        <div className="header__item">
+                                            <div className="text_menu">
+                                                <NavLinks
+                                                    to="project"
+                                                    smooth
+                                                    activeClass="active"
+                                                    spy={true}
+                                                >
+                                                    Project
+                                                </NavLinks>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </li>
+                                <li>
+                                    <motion.div
+                                        variants={item_nya}
+                                        className="closing"
+                                    >
+                                        <div className="color_icon">
+                                            <FaEllipsisV />
+                                        </div>
+                                        <div className="header__item">
+                                            <div className="resume">
+                                                <a
+                                                    href={require("../../assets/cv_prawito.pdf")}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    Resume
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                </li>
+                            </ul>
+                        </nav>
 
-                        <motion.div variants={item_nya} className="closing">
-                            <div className="color_icon">
-                                <FaEllipsisV />
-                            </div>
-                            <div className="header__item">
-                                <div className="resume">
-                                    <a
-                                        href={require("../../assets/cv_prawito.pdf")}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Resume
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
+                        {isNavOpen && (
+                            <div
+                                className="navOverlay"
+                                tabIndex="0"
+                                aria-label="overlay"
+                                role="button"
+                                onKeyDown={() => setIsNavOpen(false)}
+                                onClick={() => setIsNavOpen(false)}
+                            />
+                        )}
 
                         <MediaSocial variants={item_nya} />
                     </motion.div>
