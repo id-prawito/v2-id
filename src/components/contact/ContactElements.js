@@ -15,6 +15,11 @@ export const ContactSite = styled.section`
         justify-content: center;
     }
 
+    ${devices.ipads} {
+        min-height: 0px;
+        justify-content: center;
+    }
+
     .contact_content {
         display: flex;
         flex-direction: column;
@@ -41,6 +46,10 @@ export const ContactSite = styled.section`
             font-size: 14px;
         }
 
+        ${devices.ipads} {
+            font-size: 14px;
+        }
+
         color: ${({ theme: { theme } }) =>
             theme === themeList.light
                 ? "var(--light-text-black)"
@@ -53,6 +62,10 @@ export const ContactSite = styled.section`
         ${devices.smartphone} {
             padding: 50px 25px;
         }
+
+        ${devices.ipads} {
+            padding: 50px 50px;
+        }
     }
 
     .big_heading {
@@ -63,6 +76,10 @@ export const ContactSite = styled.section`
             theme === themeList.light
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
+
+        ${devices.smartphone} {
+            font-size: 30px;
+        }
 
         ${devices.smartphone} {
             font-size: 30px;

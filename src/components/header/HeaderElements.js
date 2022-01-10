@@ -43,6 +43,10 @@ export const HeaderContainer = styled.div`
         padding: 0px 25px;
     }
 
+    ${devices.ipads} {
+        padding: 0px 25px;
+    }
+
     .menuIcon,
     .closeIcon {
         cursor: pointer;
@@ -140,6 +144,11 @@ export const HeaderContainer = styled.div`
                 font-weight: 500;
             }
 
+            ${devices.ipads} {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
             .resume {
                 display: flex;
                 align-items: center;
@@ -190,10 +199,33 @@ export const HeaderContainer = styled.div`
                     box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
                     transform: translateX(0);
                 }
+
+                ${devices.ipads} {
+                    box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
+                    transform: translateX(0);
+                }
             }
 
             nav {
                 ${devices.smartphone} {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: fixed;
+                    width: 90%;
+                    max-width: 250px;
+                    top: 0;
+                    right: 0;
+                    background-color: ${({ theme: { theme } }) =>
+                        theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+                    height: 100vh;
+                    z-index: 100;
+                    transform: translateX(100%);
+                    transition: 0.3s ease-in-out transform;
+                    overflow: hidden;
+                }
+
+                ${devices.ipads} {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -221,6 +253,11 @@ export const HeaderContainer = styled.div`
                         gap: 20px;
                     }
 
+                    ${devices.ipads} {
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
                     li {
                         .closing {
                             display: flex;
@@ -239,6 +276,10 @@ export const HeaderContainer = styled.div`
                         : "var(--dark-text-white)"};
 
                 ${devices.smartphone} {
+                    display: none;
+                }
+
+                ${devices.ipads} {
                     display: none;
                 }
             }

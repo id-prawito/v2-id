@@ -47,12 +47,6 @@ const Hero = () => {
                         JavaScript programming language and others tech stack
                         for frontend engineer.
                     </motion.p>
-                    <motion.div variants={item_nya} className="item_hero">
-                        <div className="item_status"></div>
-                        <span>Offline</span>
-                        <div className="item_status_online"></div>
-                        <span>Online</span>
-                    </motion.div>
 
                     <motion.div variants={item_nya} className="button_hero">
                         <div className="button_my-course">

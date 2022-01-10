@@ -67,6 +67,10 @@ export const HeroSite = styled.section`
         ${devices.smartphone} {
             padding: 0px 25px;
         }
+
+        ${devices.ipads} {
+            padding: 0px 50px;
+        }
     }
 
     .big_heading {
@@ -81,6 +85,10 @@ export const HeroSite = styled.section`
         ${devices.smartphone} {
             font-size: 38px;
         }
+
+        ${devices.ipads} {
+            font-size: 38px;
+        }
     }
 
     .big_heading_one {
@@ -91,7 +99,11 @@ export const HeroSite = styled.section`
             theme === themeList.light ? "var(--light-text-black)" : "#8892b0"};
 
         ${devices.smartphone} {
-            font-size: 30px;
+            font-size: 40px;
+        }
+
+        ${devices.ipads} {
+            font-size: 40px;
         }
     }
 

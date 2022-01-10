@@ -17,6 +17,10 @@ export const ProjectSite = styled.section`
         ${devices.smartphone} {
             padding: 80px 25px;
         }
+
+        ${devices.ipads} {
+            padding: 80px 50px;
+        }
     }
 
     .item_nya {
@@ -53,6 +57,10 @@ export const ProjectSite = styled.section`
                 ${devices.smartphone} {
                     letter-spacing: 0px;
                 }
+
+                ${devices.ipads} {
+                    letter-spacing: 0px;
+                }
             }
 
             .big_heading {
@@ -82,6 +90,10 @@ export const ProjectSite = styled.section`
             grid-template-columns: repeat(2, auto);
         }
 
+        ${devices.ipads} {
+            grid-template-columns: repeat(2, auto);
+        }
+
         .card_item {
             padding: 2rem 1.75rem;
             background-color: ${({ theme: { theme } }) =>
@@ -100,6 +112,12 @@ export const ProjectSite = styled.section`
             min-width: 320px;
 
             ${devices.smartphone} {
+                min-width: 100%;
+                padding: 20px;
+                justify-content: flex-start;
+            }
+
+            ${devices.ipads} {
                 min-width: 100%;
                 padding: 20px;
                 justify-content: flex-start;
@@ -163,6 +181,11 @@ export const ProjectSite = styled.section`
                     height: 100%;
                 }
 
+                ${devices.ipads} {
+                    justify-content: space-between;
+                    height: 100%;
+                }
+
                 .item_title {
                     color: #fff;
                     font-weight: 600;
@@ -183,10 +206,6 @@ export const ProjectSite = styled.section`
                         theme === themeList.light ? "#fff" : "#8892b0"};
                     font-size: 14px;
                     height: 70px;
-
-                    /* ${devices.smartphone} {
-                        display: none;
-                    } */
 
                     p {
                         -webkit-box-orient: vertical;

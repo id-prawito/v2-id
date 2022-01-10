@@ -27,6 +27,10 @@ export const WorkSite = styled.section`
         min-height: 0px;
     }
 
+    ${devices.ipads} {
+        min-height: 0px;
+    }
+
     .work_content {
         display: flex;
         flex-direction: column;
@@ -55,6 +59,10 @@ export const WorkSite = styled.section`
         ${devices.smartphone} {
             padding: 50px 25px;
         }
+
+        ${devices.ipads} {
+            padding: 50px 50px;
+        }
     }
 
     .big_heading {
@@ -78,12 +86,20 @@ export const WorkSite = styled.section`
             gap: 40px;
         }
 
+        ${devices.ipads} {
+            gap: 40px;
+        }
+
         .project {
             display: flex;
             align-items: center;
             width: 100%;
 
             ${devices.smartphone} {
+                flex-direction: column !important;
+            }
+
+            ${devices.ipads} {
                 flex-direction: column !important;
             }
 
@@ -124,6 +140,13 @@ export const WorkSite = styled.section`
                 margin-left: -80px;
 
                 ${devices.smartphone} {
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    padding: 20px;
+                    margin-right: 0px !important;
+                }
+
+                ${devices.ipads} {
                     margin-left: 0px;
                     align-items: flex-start;
                     padding: 20px;
@@ -173,12 +196,26 @@ export const WorkSite = styled.section`
                         background-color: transparent;
                         box-shadow: none;
                         padding: 0;
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
+                    }
+
+                    ${devices.ipads} {
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                     }
 
                     p {
                         text-align: right;
 
                         ${devices.smartphone} {
+                            text-align: left;
+                        }
+
+                        ${devices.ipads} {
                             text-align: left;
                         }
                     }
@@ -191,6 +228,11 @@ export const WorkSite = styled.section`
                     ${devices.smartphone} {
                         display: grid;
                         grid-template-columns: repeat(3, auto);
+                    }
+
+                    ${devices.ipads} {
+                        display: grid;
+                        grid-template-columns: repeat(4, auto);
                     }
                     .text_list {
                         color: ${({ theme: { theme } }) =>

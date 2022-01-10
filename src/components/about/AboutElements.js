@@ -16,6 +16,10 @@ export const AboutSite = styled.section`
         padding: 40px 0px;
     }
 
+    ${devices.ipads} {
+        min-height: 0px;
+    }
+
     .pembungkus_about {
         display: flex;
         gap: 80px;
@@ -26,6 +30,10 @@ export const AboutSite = styled.section`
         ${devices.smartphone} {
             padding: 0px 25px;
         }
+
+        ${devices.ipads} {
+            padding: 40px 50px;
+        }
     }
 
     .about_content {
@@ -33,6 +41,10 @@ export const AboutSite = styled.section`
         gap: 20px;
 
         ${devices.smartphone} {
+            flex-direction: column;
+        }
+
+        ${devices.ipads} {
             flex-direction: column;
         }
 
@@ -50,6 +62,10 @@ export const AboutSite = styled.section`
         width: 50%;
 
         ${devices.smartphone} {
+            width: 100%;
+        }
+
+        ${devices.ipads} {
             width: 100%;
         }
 
@@ -148,6 +164,14 @@ export const AboutSite = styled.section`
             width: 100%;
         }
 
+        ${devices.ipads} {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 580px) and (max-width: 768px) {
+            justify-content: center;
+        }
+
         .myArea2 {
             grid-area: myArea2;
             margin-top: 20px;
@@ -231,6 +255,16 @@ export const AboutSite = styled.section`
 
             ${devices.smartphone} {
                 grid-template-columns: repeat(2, auto);
+                width: 100%;
+            }
+
+            ${devices.ipads} {
+                grid-template-columns: repeat(2, auto);
+                width: 100%;
+            }
+
+            @media only screen and (min-width: 600px) and (max-width: 768px) {
+                grid-template-columns: repeat(3, auto);
                 width: 100%;
             }
 

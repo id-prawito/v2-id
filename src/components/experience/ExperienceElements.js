@@ -15,6 +15,10 @@ export const ExperienceSite = styled.section`
         min-height: 0px;
     }
 
+    ${devices.ipads} {
+        min-height: 0px;
+    }
+
     .content {
         display: flex;
         flex-direction: column;
@@ -23,6 +27,10 @@ export const ExperienceSite = styled.section`
 
         ${devices.smartphone} {
             padding: 50px 25px;
+            height: 90vh;
+        }
+        ${devices.ipads} {
+            padding: 50px 50px;
             height: 90vh;
         }
     }
@@ -64,6 +72,11 @@ export const ExperienceSite = styled.section`
             height: 100%;
             gap: 20px;
         }
+
+        ${devices.ipads} {
+            height: 100%;
+            gap: 20px;
+        }
     }
     .rc-tabs-tab {
         padding: 5px;
@@ -77,6 +90,12 @@ export const ExperienceSite = styled.section`
         border-radius: 6px 0px 0px 6px;
 
         ${devices.smartphone} {
+            border-radius: 0px 0px 0px 0px;
+            border-bottom: 2px solid #233554;
+            border-right: 0px;
+        }
+
+        ${devices.ipads} {
             border-radius: 0px 0px 0px 0px;
             border-bottom: 2px solid #233554;
             border-right: 0px;
@@ -107,6 +126,11 @@ export const ExperienceSite = styled.section`
         padding: 10px 30px;
 
         ${devices.smartphone} {
+            width: 100%;
+            padding: 0px;
+        }
+
+        ${devices.ipads} {
             width: 100%;
             padding: 0px;
         }
@@ -152,6 +176,7 @@ export const ExperienceSite = styled.section`
 
                 .icon {
                     width: 20px;
+                    margin-top: 6px;
                 }
 
                 .text_keterangan {
