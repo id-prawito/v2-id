@@ -24,7 +24,7 @@ export const WorkSite = styled.section`
     }
 
     ${devices.smartphone} {
-        /* display: none; */
+        min-height: 0px;
     }
 
     .work_content {
@@ -53,7 +53,7 @@ export const WorkSite = styled.section`
         width: 100%;
 
         ${devices.smartphone} {
-            padding: 0px 25px;
+            padding: 50px 25px;
         }
     }
 

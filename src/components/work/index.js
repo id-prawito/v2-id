@@ -38,13 +38,12 @@ const Work = () => {
     };
 
     return (
-        <WorkSite id="work">
+        <WorkSite ref={ref} id="work">
             <div className="work_container">
                 <motion.div
                     variants={container}
                     initial="hidden"
                     animate={controls}
-                    ref={ref}
                     className="work_content"
                 >
                     <motion.h1 variants={item_nya}>Hi bro, this is</motion.h1>
