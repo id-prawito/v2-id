@@ -10,8 +10,21 @@ export const WorkSite = styled.section`
     min-height: 165vh;
     padding: 0px;
 
+    .pembungkus_card {
+        position: relative;
+        height: 100%;
+
+        .content {
+            position: absolute;
+            top: 0px;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     ${devices.smartphone} {
-        display: none;
+        /* display: none; */
     }
 
     .work_content {
@@ -38,6 +51,10 @@ export const WorkSite = styled.section`
     .work_container {
         padding: 0 100px;
         width: 100%;
+
+        ${devices.smartphone} {
+            padding: 0px 25px;
+        }
     }
 
     .big_heading {
@@ -57,10 +74,18 @@ export const WorkSite = styled.section`
         gap: 100px;
         align-items: center;
 
+        ${devices.smartphone} {
+            gap: 40px;
+        }
+
         .project {
             display: flex;
             align-items: center;
             width: 100%;
+
+            ${devices.smartphone} {
+                flex-direction: column !important;
+            }
 
             a {
                 display: block;
@@ -98,6 +123,13 @@ export const WorkSite = styled.section`
                 gap: 20px;
                 margin-left: -80px;
 
+                ${devices.smartphone} {
+                    margin-left: 0px;
+                    align-items: flex-start;
+                    padding: 20px;
+                    margin-right: 0px !important;
+                }
+
                 .text_1 {
                     color: #7c3aed;
                     font-size: 14px;
@@ -133,13 +165,22 @@ export const WorkSite = styled.section`
                         theme === themeList.light
                             ? "var(--darkCardComponent)"
                             : "var(--lightCardComponent)"};
-                    /* color: #8892b0; */
                     color: ${({ theme: { theme } }) =>
                         theme === themeList.light ? "#fff" : "#8892b0"};
                     font-size: 14px;
 
+                    ${devices.smartphone} {
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                    }
+
                     p {
                         text-align: right;
+
+                        ${devices.smartphone} {
+                            text-align: left;
+                        }
                     }
                 }
 
@@ -147,9 +188,11 @@ export const WorkSite = styled.section`
                     display: flex;
                     gap: 10px;
 
+                    ${devices.smartphone} {
+                        display: grid;
+                        grid-template-columns: repeat(3, auto);
+                    }
                     .text_list {
-                        /* color: #cad0e0; */
-
                         color: ${({ theme: { theme } }) =>
                             theme === themeList.light ? "#222" : "#cad0e0"};
                         font-size: 13px;

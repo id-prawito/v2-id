@@ -62,7 +62,7 @@ export const HeaderContainer = styled.div`
     }
     .closeIcon {
         position: absolute;
-        right: 30px;
+        right: 35px;
         top: 30px;
         &:hover {
             background-color: #8080803b;
@@ -168,6 +168,13 @@ export const HeaderContainer = styled.div`
                 &:hover {
                     color: #7c3aed;
                 }
+
+                ${devices.smartphone} {
+                    color: ${({ theme: { theme } }) =>
+                        theme === themeList.light
+                            ? "var(--light-text-black)"
+                            : "var(--dark-text-white)"};
+                }
             }
         }
 
@@ -195,7 +202,8 @@ export const HeaderContainer = styled.div`
                     max-width: 250px;
                     top: 0;
                     right: 0;
-                    background-color: #1a1d29;
+                    background-color: ${({ theme: { theme } }) =>
+                        theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
                     height: 100vh;
                     z-index: 100;
                     transform: translateX(100%);
