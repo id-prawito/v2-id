@@ -13,7 +13,7 @@ export const AboutSite = styled.section`
 
     ${devices.smartphone} {
         min-height: 0px;
-        padding: 40px 0px;
+        padding: 70px 0px;
     }
 
     ${devices.ipads} {
@@ -38,7 +38,7 @@ export const AboutSite = styled.section`
         justify-content: center;
 
         ${devices.smartphone} {
-            padding: 0px 25px;
+            padding: 20px 25px;
         }
 
         ${devices.ipads} {

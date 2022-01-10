@@ -30,7 +30,7 @@ export const ExperienceSite = styled.section`
         width: 100%;
 
         ${devices.smartphone} {
-            padding: 50px 25px;
+            padding: 80px 25px;
             height: 100vh;
         }
         ${devices.ipads} {
