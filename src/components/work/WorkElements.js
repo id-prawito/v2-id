@@ -31,6 +31,14 @@ export const WorkSite = styled.section`
         min-height: 0px;
     }
 
+    ${devices.tablet} {
+        min-height: 0px;
+    }
+
+    ${devices.desktops} {
+        min-height: 0px;
+    }
+
     .work_content {
         display: flex;
         flex-direction: column;
@@ -63,6 +71,14 @@ export const WorkSite = styled.section`
         ${devices.ipads} {
             padding: 50px 50px;
         }
+
+        ${devices.tablet} {
+            padding: 50px 100px;
+        }
+
+        ${devices.desktops} {
+            padding: 120px 100px;
+        }
     }
 
     .big_heading {
@@ -90,6 +106,10 @@ export const WorkSite = styled.section`
             gap: 40px;
         }
 
+        ${devices.tablet} {
+            gap: 40px;
+        }
+
         .project {
             display: flex;
             align-items: center;
@@ -100,6 +120,10 @@ export const WorkSite = styled.section`
             }
 
             ${devices.ipads} {
+                flex-direction: column !important;
+            }
+
+            ${devices.tablet} {
                 flex-direction: column !important;
             }
 
@@ -149,6 +173,13 @@ export const WorkSite = styled.section`
                 ${devices.ipads} {
                     margin-left: 0px;
                     align-items: flex-start;
+                    padding: 20px;
+                    margin-right: 0px !important;
+                }
+
+                ${devices.tablet} {
+                    margin-left: 0px;
+                    align-items: center;
                     padding: 20px;
                     margin-right: 0px !important;
                 }
@@ -208,6 +239,14 @@ export const WorkSite = styled.section`
                             theme === themeList.light ? "#6b7280" : "#8892b0"};
                     }
 
+                    ${devices.tablet} {
+                        background-color: transparent;
+                        box-shadow: none;
+                        padding: 0;
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
+                    }
+
                     p {
                         text-align: right;
 
@@ -216,6 +255,10 @@ export const WorkSite = styled.section`
                         }
 
                         ${devices.ipads} {
+                            text-align: left;
+                        }
+
+                        ${devices.tablet} {
                             text-align: left;
                         }
                     }
@@ -234,6 +277,12 @@ export const WorkSite = styled.section`
                         display: grid;
                         grid-template-columns: repeat(4, auto);
                     }
+
+                    /* ${devices.tablet} {
+                        display: grid;
+                        grid-template-columns: repeat(5, auto);
+                    } */
+
                     .text_list {
                         color: ${({ theme: { theme } }) =>
                             theme === themeList.light ? "#222" : "#cad0e0"};

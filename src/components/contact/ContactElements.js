@@ -70,7 +70,7 @@ export const ContactSite = styled.section`
 
     .big_heading {
         margin: 0px;
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 600;
         color: ${({ theme: { theme } }) =>
             theme === themeList.light

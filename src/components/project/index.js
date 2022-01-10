@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 const Project = () => {
     const [repo, setRepo] = useState([]);
     const [visible_item, setVisible] = useState(
-        window.innerWidth > 768 ? 3 : 4
+        window.innerWidth > 1155 ? 3 : 4
     );
     const myRef = useRef(null);
 

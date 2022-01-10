@@ -18,6 +18,10 @@ export const FooterSite = styled.footer`
         ${devices.smartphone} {
             display: initial;
         }
+
+        ${devices.ipads} {
+            display: initial;
+        }
     }
 
     .footer_item {

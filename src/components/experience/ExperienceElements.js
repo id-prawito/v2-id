@@ -19,6 +19,10 @@ export const ExperienceSite = styled.section`
         min-height: 0px;
     }
 
+    /* ${devices.desktops} {
+        min-height: 0px;
+    } */
+
     .content {
         display: flex;
         flex-direction: column;
@@ -27,11 +31,20 @@ export const ExperienceSite = styled.section`
 
         ${devices.smartphone} {
             padding: 50px 25px;
-            height: 90vh;
+            height: 100vh;
         }
         ${devices.ipads} {
             padding: 50px 50px;
             height: 90vh;
+        }
+
+        ${devices.tablet} {
+            padding: 50px 100px;
+            /* height: 90vh; */
+        }
+        ${devices.desktops} {
+            padding: 120px 0px;
+            /* height: 90vh; */
         }
     }
 

@@ -21,6 +21,10 @@ export const ProjectSite = styled.section`
         ${devices.ipads} {
             padding: 80px 50px;
         }
+
+        ${devices.tablet} {
+            padding: 80px 100px;
+        }
     }
 
     .item_nya {
@@ -61,6 +65,10 @@ export const ProjectSite = styled.section`
                 ${devices.ipads} {
                     letter-spacing: 0px;
                 }
+
+                ${devices.tablet} {
+                    letter-spacing: 0px;
+                }
             }
 
             .big_heading {
@@ -94,6 +102,20 @@ export const ProjectSite = styled.section`
             grid-template-columns: repeat(2, auto);
         }
 
+        ${devices.tablet} {
+            grid-template-columns: repeat(2, auto);
+        }
+
+        ${devices.laptop} {
+            grid-template-columns: repeat(3, auto);
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 1024px) and (max-width: 1155px) {
+            grid-template-columns: repeat(2, auto);
+            width: 100%;
+        }
+
         .card_item {
             padding: 2rem 1.75rem;
             background-color: ${({ theme: { theme } }) =>
@@ -122,6 +144,18 @@ export const ProjectSite = styled.section`
                 padding: 20px;
                 justify-content: flex-start;
             }
+
+            ${devices.tablet} {
+                min-width: 100%;
+                padding: 20px;
+                justify-content: flex-start;
+            }
+
+            /* ${devices.laptop} {
+                min-width: 100%;
+                padding: 20px;
+                justify-content: flex-start;
+            } */
 
             &:hover {
                 transform: translateY(-7px);
