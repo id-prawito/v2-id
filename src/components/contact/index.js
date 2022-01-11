@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { ContactSite } from "./ContactElements";
 import { FaRegThumbsUp } from "react-icons/fa";
-import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
+import { CONTACT_DATA } from "../../config/Data";
+import { ContactSite } from "./ContactElements";
 
 const Contact = () => {
     const controls = useAnimation();
@@ -44,26 +45,25 @@ const Contact = () => {
                     ref={ref}
                     className="contact_content"
                 >
-                    <motion.h1 variants={item_nya}>What's Next ?</motion.h1>
+                    <motion.h1 variants={item_nya}>
+                        {CONTACT_DATA.text_small}
+                    </motion.h1>
                     <motion.div variants={item_nya} className="big_heading">
-                        Get in Touch
+                        {CONTACT_DATA.big_heading}
                     </motion.div>
                     <motion.p variants={item_nya}>
-                        Although I’m not currently looking for any new
-                        opportunities, my inbox is always open. Whether you have
-                        a question or just want to say hi, I’ll try my best to
-                        get back to you!
+                        {CONTACT_DATA.description}
                     </motion.p>
                     <motion.div variants={item_nya} className="button_hero">
                         <div className="button_my-course">
                             <div className="item_content">
                                 <FaRegThumbsUp />
                                 <a
-                                    href="mailto:prawito.id@gmail.com"
+                                    href={CONTACT_DATA.to}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Say Hello
+                                    {CONTACT_DATA.button}
                                 </a>
                             </div>
                         </div>

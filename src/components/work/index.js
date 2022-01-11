@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import { WorkSite } from "./WorkElements";
-import pokedex from "../../assets/img/pokedex-id.PNG";
-import disneyPlus from "../../assets/img/disney-plus.PNG";
-import spkPromethee from "../../assets/img/spk-promethee.PNG";
-import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
+import { WORK_DATA } from "../../config/Data";
+import { WorkSite } from "./WorkElements";
 
 const Work = () => {
     const controls = useAnimation();
@@ -46,219 +43,92 @@ const Work = () => {
                     animate={controls}
                     className="work_content"
                 >
-                    <motion.h1 variants={item_nya}>Hi bro, this is</motion.h1>
+                    <motion.h1 variants={item_nya}>
+                        {WORK_DATA.text_small}
+                    </motion.h1>
                     <motion.div variants={item_nya} className="big_heading">
-                        Some Things I've Built
+                        {WORK_DATA.big_heading}
                     </motion.div>
                     <div className="content_item">
-                        <motion.div variants={item_nya} className="project">
-                            <div className="project_image">
-                                <a
-                                    href="https://id-prawito.github.io/pokedex-id/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        src={pokedex}
-                                        alt="pokedex-id"
-                                        className="image_alt"
-                                    />
-                                </a>
-                            </div>
-                            <div className="project_content">
-                                <p className="text_1">Featured Project</p>
-                                <h3 className="text_2">
-                                    <a
-                                        href="https://id-prawito.github.io/pokedex-id/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Pokedex-id
-                                    </a>
-                                </h3>
-                                <div className="project_description">
-                                    <p>
-                                        Pokédex id is an electronic device
-                                        designed to catalogue and provide
-                                        information regarding the various
-                                        species of Pokémon featured in the
-                                        Pokémon video game, anime and manga
-                                        series. Search for a Pokémon by name or
-                                        using it's National Pokédex number.
-                                    </p>
-                                </div>
-                                <div className="project-tech-list">
-                                    <div className="text_list">VS Code</div>
-                                    <div className="text_list">Pokedex API</div>
-                                    <div className="text_list">React</div>
-                                    <div className="text_list">
-                                        Styled Components
-                                    </div>
-                                    <div className="text_list">
-                                        Github Pages
-                                    </div>
-                                </div>
-                                <div className="project_link">
-                                    <a
-                                        href="https://github.com/id-prawito/pokedex-id"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiGithub />
-                                    </a>
-                                    <a
-                                        href="https://id-prawito.github.io/pokedex-id/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiExternalLink />
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            variants={item_nya}
-                            className="project"
-                            style={{ flexDirection: "row-reverse" }}
-                        >
-                            <div className="project_image">
-                                <a
-                                    href="https://id-prawito.github.io/disney-plus/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <img
-                                        src={disneyPlus}
-                                        alt="disney-plus"
-                                        className="image_alt"
-                                    />
-                                </a>
-                            </div>
-                            <div
-                                className="project_content"
-                                style={{
-                                    marginLeft: "0",
-                                    marginRight: "-80px",
-                                    alignItems: "flex-start",
-                                }}
+                        {WORK_DATA.project.map((project_item, i) => (
+                            <motion.div
+                                key={i}
+                                variants={item_nya}
+                                className="project"
+                                style={{ flexDirection: project_item.style }}
                             >
-                                <p className="text_1">Featured Project</p>
-                                <h3 className="text_2">
+                                <div className="project_image">
                                     <a
-                                        href="https://id-prawito.github.io/disney-plus/"
+                                        href={project_item.project_to}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Disney Plus
-                                    </a>
-                                </h3>
-                                <div className="project_description">
-                                    <p style={{ textAlign: "left" }}>
-                                        A minimal, dark blue theme for VS Code,
-                                        Sublime Text, Atom, iTerm, and more.
-                                        Available on Visual Studio Marketplace,
-                                        Package Control, Atom Package Manager,
-                                        and npm.
-                                    </p>
-                                </div>
-                                <div className="project-tech-list">
-                                    <div className="text_list">VS Code</div>
-                                    <div className="text_list">TMDB API</div>
-                                    <div className="text_list">React</div>
-                                    <div className="text_list">Scss</div>
-                                    <div className="text_list">
-                                        Github Pages
-                                    </div>
-                                    <div className="text_list">Swiper Js</div>
-                                </div>
-                                <div className="project_link">
-                                    <a
-                                        href="https://github.com/id-prawito/disney-plus"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiGithub />
-                                    </a>
-                                    <a
-                                        href="https://id-prawito.github.io/disney-plus/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiExternalLink />
+                                        <img
+                                            src={project_item.project_img}
+                                            alt={project_item.alt}
+                                            className="image_alt"
+                                        />
                                     </a>
                                 </div>
-                            </div>
-                        </motion.div>
-                        <motion.div variants={item_nya} className="project">
-                            <div className="project_image">
-                                <a
-                                    href="https://promethee.ta-spk.xyz"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <div
+                                    className="project_content"
+                                    style={{
+                                        marginLeft: project_item.ml,
+                                        marginRight: project_item.mr,
+                                        alignItems: project_item.ai,
+                                    }}
                                 >
-                                    <img
-                                        src={spkPromethee}
-                                        alt="pokedex-id"
-                                        className="image_alt"
-                                    />
-                                </a>
-                            </div>
-                            <div className="project_content">
-                                <p className="text_1">Featured Project</p>
-                                <h3 className="text_2">
-                                    <a
-                                        href="https://promethee.ta-spk.xyz"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        SPK - Promethee
-                                    </a>
-                                </h3>
-                                <div className="project_description">
-                                    <p>
-                                        Decision Support System for Priority
-                                        Determination of Small Dam Construction
-                                        Development with The Promethee Method
-                                        (Preference Ranking Organization Method
-                                        for Enrichment Evaluation).
+                                    <p className="text_1">
+                                        {project_item.text}
                                     </p>
-                                </div>
-                                <div className="project-tech-list">
-                                    <div className="text_list">VS Code</div>
-                                    <div className="text_list">Laravel</div>
-                                    <div className="text_list">PHP</div>
-                                    <div className="text_list">MySQL</div>
-                                    <div className="text_list">Pond Data</div>
-                                    <div className="text_list">
-                                        Promethee Method
+                                    <h3 className="text_2">
+                                        <a
+                                            href={project_item.project_to}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {project_item.alt}
+                                        </a>
+                                    </h3>
+                                    <div className="project_description">
+                                        <p
+                                            style={{
+                                                textAlign: project_item.ta,
+                                            }}
+                                        >
+                                            {project_item.description}
+                                        </p>
                                     </div>
-                                    <div className="text_list">DSS</div>
+                                    <div className="project-tech-list">
+                                        {project_item.tect_list.map(
+                                            (item, i) => (
+                                                <div
+                                                    key={i}
+                                                    className="text_list"
+                                                >
+                                                    {item}
+                                                </div>
+                                            )
+                                        )}
+                                    </div>
+                                    <div className="project_link">
+                                        {project_item.project_link.map(
+                                            (item, i) => (
+                                                <a
+                                                    key={i}
+                                                    href={item.to}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="links"
+                                                >
+                                                    <item.icon />
+                                                </a>
+                                            )
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="project_link">
-                                    <a
-                                        style={{ display: "none" }}
-                                        href="www.google.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiGithub />
-                                    </a>
-                                    <a
-                                        href="https://promethee.ta-spk.xyz"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="links"
-                                    >
-                                        <FiExternalLink />
-                                    </a>
-                                </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.div>
             </div>

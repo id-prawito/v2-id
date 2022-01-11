@@ -1,8 +1,8 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FaInstagram, FaCodeBranch, FaRegStar } from "react-icons/fa";
-import { FiGithub, FiLinkedin, FiPhone, FiTwitter } from "react-icons/fi";
+import { FaCodeBranch, FaRegStar } from "react-icons/fa";
 import { FooterSite, Item } from "./FooterElements";
+import { MEDIA_SOSIAL } from "../../config/Data";
+import axios from "axios";
 
 const Footer = () => {
     const [total, setTotal] = useState([]);
@@ -38,56 +38,18 @@ const Footer = () => {
         <FooterSite>
             <div className="footer_media-social">
                 <Item>
-                    <li className="item_li">
-                        <a
-                            href="https://github.com/id-prawito"
-                            aria-label="GitHub"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiGithub />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://www.instagram.com/praw.ito/"
-                            aria-label="Instagram"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaInstagram />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://twitter.com/id_praw"
-                            aria-label="Twitter"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiTwitter />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://linkedin.com/in/prawito/"
-                            aria-label="Linkedin"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiLinkedin />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="tel:+6282137925172"
-                            aria-label="Phone"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiPhone />
-                        </a>
-                    </li>
+                    {MEDIA_SOSIAL.map((item, i) => (
+                        <li key={i} className="item_li">
+                            <a
+                                href={item.to}
+                                aria-label={item.label}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <item.icon />
+                            </a>
+                        </li>
+                    ))}
                 </Item>
             </div>
             <div className="footer_item">

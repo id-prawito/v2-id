@@ -1,6 +1,6 @@
 import React from "react";
+import { HERO_DATA } from "../../config/Data";
 import { HeroSite } from "./HeroElements";
-import { FiGithub } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -33,41 +33,31 @@ const Hero = () => {
                     animate="visible"
                     className="hero_content"
                 >
-                    <motion.h1 variants={item_nya}>Hi, name is</motion.h1>
+                    <motion.h1 variants={item_nya}>
+                        {HERO_DATA.text_small}
+                    </motion.h1>
                     <motion.div variants={item_nya} className="big_heading">
-                        Prawito (Boy).
+                        {HERO_DATA.big_heading}
                     </motion.div>
                     <motion.div variants={item_nya} className="big_heading_one">
-                        I build things for the web.
+                        {HERO_DATA.big_heading2}
                     </motion.div>
                     <motion.p variants={item_nya}>
-                        I'm a software engineer specializing in building (and
-                        occasionally designing) exceptional digital experiences.
-                        Currently, I'm focused on exploring and learning about
-                        JavaScript programming language and others tech stack
-                        for frontend engineer.
+                        {HERO_DATA.description}
                     </motion.p>
-
                     <motion.div variants={item_nya} className="button_hero">
-                        <div className="button_my-course">
-                            <a
-                                href="https://bit.ly/Certificate_Praw"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Check My Files
-                            </a>
-                        </div>
-                        <div className="button_my-course">
-                            <FiGithub />
-                            <a
-                                href="https://github.com/id-prawito"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Github
-                            </a>
-                        </div>
+                        {HERO_DATA.button.map((item, i) => (
+                            <div key={i} className="button_my-course">
+                                <item.icon />
+                                <a
+                                    href={item.to}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.nama_button}
+                                </a>
+                            </div>
+                        ))}
                     </motion.div>
                 </motion.div>
             </div>

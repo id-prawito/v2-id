@@ -1,11 +1,11 @@
-import { ProjectSite } from "./ProjectElements";
 import { FiExternalLink, FiGithub, FiFolder } from "react-icons/fi";
-import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
+import axios from "axios";
+import { ProjectSite } from "./ProjectElements";
 
 const Project = () => {
     const [repo, setRepo] = useState([]);

@@ -1,15 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import logoSite from "../../assets/img/logo_site.png";
-import { FaEllipsisV, FaInstagram } from "react-icons/fa";
-import {
-    FiGithub,
-    FiTwitter,
-    FiLinkedin,
-    FiPhone,
-    FiMenu,
-    FiX,
-} from "react-icons/fi";
+import { FaChevronUp, FaEllipsisV } from "react-icons/fa";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
+import { FiMenu, FiX } from "react-icons/fi";
+import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
+import logoSite from "../../assets/img/logo_site.png";
 import ThemeSwitcher from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 
@@ -99,7 +93,6 @@ const Header = () => {
                             <ThemeSwitcher />
                         </motion.div>
                     </div>
-
                     {isMobile && (
                         <div
                             className="menuIcon"
@@ -134,96 +127,31 @@ const Header = () => {
                                     <FiX />
                                 </div>
                             )}
-
                             <ul>
-                                <li>
-                                    <motion.div
-                                        variants={item_nya}
-                                        className="closing"
-                                    >
-                                        <div className="color_icon">
-                                            <FaEllipsisV />
-                                        </div>
-                                        <div className="header__item">
-                                            <div className="text_menu">
-                                                <NavLinks
-                                                    to="about"
-                                                    smooth
-                                                    activeClass="active"
-                                                    spy={true}
-                                                >
-                                                    About
-                                                </NavLinks>
+                                {NAVLINKS.map((item, i) => (
+                                    <li key={i}>
+                                        <motion.div
+                                            variants={item_nya}
+                                            className="closing"
+                                        >
+                                            <div className="color_icon">
+                                                <item.icon />
                                             </div>
-                                        </div>
-                                    </motion.div>
-                                </li>
-                                <li>
-                                    <motion.div
-                                        variants={item_nya}
-                                        className="closing"
-                                    >
-                                        <div className="color_icon">
-                                            <FaEllipsisV />
-                                        </div>
-                                        <div className="header__item">
-                                            <div className="text_menu">
-                                                <NavLinks
-                                                    to="experience"
-                                                    smooth
-                                                    activeClass="active"
-                                                    spy={true}
-                                                >
-                                                    Experience
-                                                </NavLinks>
+                                            <div className="header__item">
+                                                <div className="text_menu">
+                                                    <NavLinks
+                                                        to={item.to}
+                                                        smooth
+                                                        activeClass="active"
+                                                        spy={true}
+                                                    >
+                                                        {item.name}
+                                                    </NavLinks>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </motion.div>
-                                </li>
-                                <li>
-                                    <motion.div
-                                        variants={item_nya}
-                                        className="closing"
-                                    >
-                                        <div className="color_icon">
-                                            <FaEllipsisV />
-                                        </div>
-                                        <div className="header__item">
-                                            <div className="text_menu">
-                                                <NavLinks
-                                                    to="work"
-                                                    smooth
-                                                    activeClass="active"
-                                                    spy={true}
-                                                >
-                                                    Work
-                                                </NavLinks>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                </li>
-                                <li>
-                                    <motion.div
-                                        variants={item_nya}
-                                        className="closing"
-                                    >
-                                        <div className="color_icon">
-                                            <FaEllipsisV />
-                                        </div>
-                                        <div className="header__item">
-                                            <div className="text_menu">
-                                                <NavLinks
-                                                    to="project"
-                                                    smooth
-                                                    activeClass="active"
-                                                    spy={true}
-                                                >
-                                                    Project
-                                                </NavLinks>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                </li>
+                                        </motion.div>
+                                    </li>
+                                ))}
                                 <li>
                                     <motion.div
                                         variants={item_nya}
@@ -276,56 +204,18 @@ const MediaSocial = ({ variants }) => {
                 orientation="left"
             >
                 <ul className="item_media">
-                    <li className="item_li">
-                        <a
-                            href="https://github.com/id-prawito"
-                            aria-label="GitHub"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiGithub />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://www.instagram.com/praw.ito/"
-                            aria-label="Instagram"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaInstagram />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://twitter.com/id_praw"
-                            aria-label="Twitter"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiTwitter />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="https://linkedin.com/in/prawito/"
-                            aria-label="Linkedin"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiLinkedin />
-                        </a>
-                    </li>
-                    <li className="item_li">
-                        <a
-                            href="tel:+6282137925172"
-                            aria-label="Phone"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FiPhone />
-                        </a>
-                    </li>
+                    {MEDIA_SOSIAL.map((item, i) => (
+                        <li key={i} className="item_li">
+                            <a
+                                href={item.to}
+                                aria-label={item.label}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <item.icon />
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </motion.div>
             <motion.div
@@ -335,14 +225,9 @@ const MediaSocial = ({ variants }) => {
             >
                 <ul className="item_media">
                     <li className="item_li">
-                        <a
-                            href="https://github.com/bchiang7"
-                            aria-label="GitHub"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <FaInstagram />
-                        </a>
+                        <NavLinks to="home" smooth>
+                            <FaChevronUp />
+                        </NavLinks>
                     </li>
                 </ul>
             </motion.div>

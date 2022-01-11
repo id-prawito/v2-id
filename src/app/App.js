@@ -1,12 +1,12 @@
 import { BrowserRouter, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { useContext } from "react";
+import GlobalStyles from "../config/GlobalStyles";
+import ThemeContext from "../config/ThemeContext";
+import RoutesSite from "../config/RouterSite";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import RoutesSite from "../config/RouterSite";
-import GlobalStyles from "../config/GlobalStyles";
-import { ThemeProvider } from "styled-components";
-import ThemeContext from "../config/ThemeContext";
 import "./app.scss";
-import { useContext } from "react";
 
 function App() {
     const { theme } = useContext(ThemeContext);
