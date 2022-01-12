@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/v2-id/static/css/main.eda3323c.css",
-    "main.js": "/v2-id/static/js/main.7662a3d4.js",
+    "main.js": "/v2-id/static/js/main.fad8231d.js",
     "static/media/disney-plus.PNG": "/v2-id/static/media/disney-plus.ff0bfb2909b9be7dd5b2.PNG",
     "static/media/cv_prawito.pdf": "/v2-id/static/media/cv_prawito.62769c46a2db417ecdd2.pdf",
     "static/media/spk-promethee.PNG": "/v2-id/static/media/spk-promethee.96412893015717ab26bd.PNG",
@@ -14,8 +14,8 @@
     "static/media/sqlite.svg": "/v2-id/static/media/sqlite.237e776b1921b0cd3041b9237fe9b63a.svg",
     "static/media/scss.svg": "/v2-id/static/media/scss.268e3eae7bab4d31e903cda005f309c2.svg",
     "static/media/mongoDB.svg": "/v2-id/static/media/mongoDB.0781b723446e1f8a1734f7831a9c3313.svg",
-    "static/media/github.svg": "/v2-id/static/media/github.11a5bdb0320ba839542a6d0aeafa1271.svg",
     "index.html": "/v2-id/index.html",
+    "static/media/github.svg": "/v2-id/static/media/github.11a5bdb0320ba839542a6d0aeafa1271.svg",
     "static/media/css.svg": "/v2-id/static/media/css.6ec1697a406483c72ccf775894d16777.svg",
     "static/media/nextJS.svg": "/v2-id/static/media/nextJS.1b06d26152cc2b04aa4e6fac1f732fe0.svg",
     "static/media/git.svg": "/v2-id/static/media/git.6d27b5e0cde4ddb87e031ca706aa8350.svg",
@@ -26,10 +26,10 @@
     "static/media/firebase.svg": "/v2-id/static/media/firebase.82a35fc0b90d124a8e7333989f767fd3.svg",
     "static/media/vueJs.svg": "/v2-id/static/media/vueJs.f1fd23be1db9361fbcd81511fe862b08.svg",
     "main.eda3323c.css.map": "/v2-id/static/css/main.eda3323c.css.map",
-    "main.7662a3d4.js.map": "/v2-id/static/js/main.7662a3d4.js.map"
+    "main.fad8231d.js.map": "/v2-id/static/js/main.fad8231d.js.map"
   },
   "entrypoints": [
     "static/css/main.eda3323c.css",
-    "static/js/main.7662a3d4.js"
+    "static/js/main.fad8231d.js"
   ]
 }
