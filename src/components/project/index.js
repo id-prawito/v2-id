@@ -90,7 +90,7 @@ const Project = () => {
                 >
                     <motion.div variants={item_nya} className="content_judul">
                         <div className="big_heading">
-                            Some Things I've Built
+                            Other Noteworthy Projects
                         </div>
                         <h1>View the archive of Github API</h1>
                     </motion.div>

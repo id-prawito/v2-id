@@ -56,7 +56,6 @@ export const ProjectSite = styled.section`
                 color: #7c3aed;
                 font-size: 14px;
                 font-weight: 500;
-                letter-spacing: 1.3px;
 
                 ${devices.smartphone} {
                     letter-spacing: 0px;

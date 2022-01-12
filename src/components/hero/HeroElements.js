@@ -96,7 +96,7 @@ export const HeroSite = styled.section`
         font-size: 60px;
         font-weight: 600;
         color: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "var(--light-text-black)" : "#8892b0"};
+            theme === themeList.light ? "#6b7280" : "#8892b0"};
 
         ${devices.smartphone} {
             font-size: 40px;

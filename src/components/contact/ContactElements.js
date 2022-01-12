@@ -38,6 +38,7 @@ export const ContactSite = styled.section`
     }
 
     p {
+        font-size: 14px;
         max-width: 540px;
         line-height: 1.8;
         text-align: center;
@@ -99,7 +100,7 @@ export const ContactSite = styled.section`
             background-color: transparent;
             color: #7c3aed;
             gap: 10px;
-            padding: 14px 20px;
+            padding: 12px 20px;
             max-height: 100%;
             border-radius: 6px;
             transition: 0.3s all ease;

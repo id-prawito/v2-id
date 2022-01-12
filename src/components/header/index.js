@@ -75,20 +75,27 @@ const Header = () => {
     return (
         <HeaderSite ref={headerRef}>
             <HeaderContainer>
-                <div className="header__logo_link">
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    className="header__logo_link"
+                >
                     <div className="header__logo">
-                        <NavLinks
-                            to="home"
-                            smooth
-                            activeClass="active"
-                            spy={true}
-                        >
-                            <img
-                                alt="logo_header"
-                                src={logoSite}
-                                className="logo__img"
-                            />
-                        </NavLinks>
+                        <motion.div variants={item_nya}>
+                            <NavLinks
+                                to="home"
+                                smooth
+                                activeClass="active"
+                                spy={true}
+                            >
+                                <img
+                                    alt="logo_header"
+                                    src={logoSite}
+                                    className="logo__img"
+                                />
+                            </NavLinks>
+                        </motion.div>
                         <motion.div variants={item_nya}>
                             <ThemeSwitcher />
                         </motion.div>
@@ -105,12 +112,7 @@ const Header = () => {
                         </div>
                     )}
 
-                    <motion.div
-                        variants={container}
-                        initial="hidden"
-                        animate="visible"
-                        className="header__menu"
-                    >
+                    <div className="header__menu">
                         <nav
                             className={
                                 isMobile && isNavOpen ? "open" : undefined
@@ -188,8 +190,8 @@ const Header = () => {
                         )}
 
                         <MediaSocial variants={item_nya} />
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
             </HeaderContainer>
         </HeaderSite>
     );

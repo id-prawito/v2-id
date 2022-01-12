@@ -47,8 +47,8 @@ export const WorkSite = styled.section`
 
     h1 {
         color: #7c3aed;
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 14px;
+        font-weight: 500;
     }
 
     span {
@@ -164,21 +164,21 @@ export const WorkSite = styled.section`
                 margin-left: -80px;
 
                 ${devices.smartphone} {
-                    margin-left: 0px;
+                    margin-left: 0px !important;
                     align-items: flex-start;
                     padding: 20px;
                     margin-right: 0px !important;
                 }
 
                 ${devices.ipads} {
-                    margin-left: 0px;
+                    margin-left: 0px !important;
                     align-items: flex-start;
                     padding: 20px;
                     margin-right: 0px !important;
                 }
 
                 ${devices.tablet} {
-                    margin-left: 0px;
+                    margin-left: 0px !important;
                     align-items: center;
                     padding: 20px;
                     margin-right: 0px !important;

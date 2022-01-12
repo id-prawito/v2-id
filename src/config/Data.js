@@ -144,7 +144,7 @@ export const TECH_STACK = [
 ];
 
 export const ABOUT_DATA = {
-    text_small: "Being a front-end developer",
+    text_small: "Being a frontend developer / frontend engineer.",
     big_heading: "Who am I <span>&</span> how did i get here.",
     text_description:
         "Hello, i am Prawito (a.k.a Boy). I am from Indonesia who codes for fun, i have been in coding since 2016, when i was studied in Diponegoro University and I am graduated in June 2021. I have been using JavaScripts (Node JS and React Js (Client Side)) for 1.5 year. Now I'm trying to produce a lots of open source project and working as freelancer.",
@@ -171,7 +171,7 @@ export const ABOUT_DATA = {
             images: mySQL,
             alt: "MySQL",
             years: "(1.8 Years)",
-            description: "A minimal, dark blue theme for VS Code,",
+            description: "Database technology I learned first.",
         },
     ],
     card_myArea2: [
@@ -180,14 +180,14 @@ export const ABOUT_DATA = {
             images: figma,
             alt: "Figma",
             years: "(0.8 Years)",
-            description: "A minimal, dark blue theme for VS Code,",
+            description: "I use it to create a user interface.",
         },
         {
             backgroundColor: "#354164",
             images: nodeJS,
             alt: "Node JS",
             years: "(0.5 Years)",
-            description: "A minimal, dark blue theme for VS Code,",
+            description: "I learned because it deals with Javascript.",
         },
     ],
 };
@@ -220,7 +220,7 @@ export const EXPE_DATA = {
                 },
                 {
                     icon: FaLeaf,
-                    desc: "Shared knowledge about how to do coding with programming technology HTML, CSS, JavaScript, and React JS. technology HTML, CSS, JavaScript, and React JS.",
+                    desc: "Shared knowledge about how to do coding with programming technology HTML, CSS, JavaScript, and React JS.",
                 },
             ],
         },
@@ -306,7 +306,7 @@ export const HERO_DATA = {
     big_heading: "Prawito (Boy).",
     big_heading2: "I build things for the web.",
     description:
-        "I'm a software engineer specializing in building (andoccasionally designing) exceptional digital experiences.Currently, I'm focused on exploring and learning aboutJavaScript programming language and others tech stackfor frontend engineer.",
+        "I'm a software engineer specializing in building (andoccasionally designing) exceptional digital experiences. Currently, I'm focused on exploring and learning about JavaScript programming language and others tech stack for frontend engineer.",
     button: [
         {
             to: "https://bit.ly/Certificate_Praw",
@@ -336,7 +336,7 @@ export const WORK_DATA = {
             ta: "right",
             text: "Featured Project",
             description:
-                "Pokédex id is an electronic devicedesigned to catalogue and provideinformation regarding the variousspecies of Pokémon featured in thePokémon video game, anime and mangaseries. Search for a Pokémon by name orusing it's National Pokédex number.",
+                "Pokédex id is an electronic device designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series. Search for a Pokémon by name orusing it's National Pokédex number.",
             tect_list: [
                 "VS Code",
                 "Pokedex API",
@@ -366,7 +366,7 @@ export const WORK_DATA = {
             ta: "left",
             text: "Featured Project",
             description:
-                "A minimal, dark blue theme for VS Code,Sublime Text, Atom, iTerm, and more.Available on Visual Studio Marketplace,Package Control, Atom Package Manager,and npm.",
+                "Disney Plus is a movie search app clone from Disney + website, this app can helps display and sort all movies available in the TMDB API. This App is build with ReactJS, SCSS and Swiper JS. Also, uses Github Pages to deploy.",
             tect_list: [
                 "VS Code",
                 "TMDB API",
@@ -397,7 +397,7 @@ export const WORK_DATA = {
             ta: "right",
             text: "Featured Project",
             description:
-                "Decision Support System for PriorityDetermination of Small Dam ConstructionDevelopment with The Promethee Method(Preference Ranking Organization Methodfor Enrichment Evaluation).",
+                "Decision Support System for Priority Determination of Small Dam Construction Development with The Promethee Method (Preference Ranking Organization Methodfor Enrichment Evaluation).",
             tect_list: [
                 "VS Code",
                 "Laravel",

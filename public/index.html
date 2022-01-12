@@ -8,11 +8,14 @@
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Second iteration of my personal website built with React Js." />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+  <link rel="stylesheet" href="nprogress.css" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -38,6 +41,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    NProgress.configure({
+      easing: 'ease',
+      speed: 1000,
+    });
+    NProgress.start();
+    NProgress.done();
+  </script>
 </body>
 
 </html>
