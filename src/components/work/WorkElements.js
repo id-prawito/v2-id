@@ -5,8 +5,8 @@ import { devices } from "../../assets/scss/_respondTo";
 export const WorkSite = styled.section`
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
     min-height: 165vh;
     padding: 0px;
 
@@ -16,10 +16,10 @@ export const WorkSite = styled.section`
 
         .content {
             position: absolute;
-            top: 0px;
             padding: 20px;
-            width: 100%;
             height: 100%;
+            width: 100%;
+            top: 0px;
         }
     }
 
@@ -46,9 +46,9 @@ export const WorkSite = styled.section`
     }
 
     h1 {
-        color: #7c3aed;
-        font-size: 14px;
+        color: var(--colorMain);
         font-weight: 500;
+        font-size: 14px;
     }
 
     span {
@@ -82,21 +82,21 @@ export const WorkSite = styled.section`
     }
 
     .big_heading {
-        margin: 0px;
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 20px;
         color: ${({ theme: { theme } }) =>
             theme === themeList.light
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 40px;
+        margin: 0px;
     }
 
     .content_item {
         display: flex;
         flex-direction: column;
-        gap: 100px;
         align-items: center;
+        gap: 100px;
 
         ${devices.smartphone} {
             gap: 40px;
@@ -132,10 +132,10 @@ export const WorkSite = styled.section`
             }
 
             .project_image {
+                background-color: rgb(10 25 47 / 60%);
+                border-radius: 10px;
                 max-width: 600px;
                 overflow: auto;
-                border-radius: 10px;
-                background-color: rgb(10 25 47 / 60%);
                 transition: 350ms ease-in-out;
 
                 &:hover {
@@ -144,13 +144,13 @@ export const WorkSite = styled.section`
                 }
 
                 .image_alt {
-                    opacity: 1;
-                    display: block;
-                    width: 100%;
-                    height: auto;
-                    backface-visibility: hidden;
                     position: relative;
+                    display: block;
+                    height: auto;
+                    width: 100%;
                     z-index: -1;
+                    opacity: 1;
+                    backface-visibility: hidden;
                     transition: 350ms ease-in-out;
                 }
             }
@@ -159,92 +159,90 @@ export const WorkSite = styled.section`
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+                margin-left: -80px;
                 width: 100%;
                 gap: 20px;
-                margin-left: -80px;
 
                 ${devices.smartphone} {
+                    margin-right: 0px !important;
                     margin-left: 0px !important;
                     align-items: flex-start;
                     padding: 20px;
-                    margin-right: 0px !important;
                 }
 
                 ${devices.ipads} {
+                    margin-right: 0px !important;
                     margin-left: 0px !important;
                     align-items: flex-start;
                     padding: 20px;
-                    margin-right: 0px !important;
                 }
 
                 ${devices.tablet} {
+                    margin-right: 0px !important;
                     margin-left: 0px !important;
                     align-items: center;
                     padding: 20px;
-                    margin-right: 0px !important;
                 }
 
                 .text_1 {
-                    color: #7c3aed;
-                    font-size: 14px;
-                    font-weight: 500;
+                    color: var(--colorMain);
                     letter-spacing: 1.3px;
+                    font-weight: 500;
+                    font-size: 14px;
                 }
 
                 .text_2 {
-                    /* color: #fff; */
-                    font-weight: 600;
-                    font-size: 24px;
-                    cursor: pointer;
-                    margin-top: -8px;
-
                     color: ${({ theme: { theme } }) =>
                         theme === themeList.light
                             ? "var(--light-text-black)"
                             : "var(--dark-text-white)"};
+                    font-weight: 600;
+                    margin-top: -8px;
+                    font-size: 24px;
+                    cursor: pointer;
 
                     &:hover {
-                        color: #7c3aed;
+                        color: var(--colorMain);
                     }
                 }
 
                 .project_description {
-                    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-                    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-                    position: relative;
-                    z-index: 2;
-                    padding: 25px;
-                    border-radius: 6px;
+                    color: ${({ theme: { theme } }) =>
+                        theme === themeList.light ? "#fff" : "#8892b0"};
                     background-color: ${({ theme: { theme } }) =>
                         theme === themeList.light
                             ? "var(--darkCardComponent)"
                             : "var(--lightCardComponent)"};
-                    color: ${({ theme: { theme } }) =>
-                        theme === themeList.light ? "#fff" : "#8892b0"};
+                    position: relative;
+                    border-radius: 6px;
                     font-size: 14px;
+                    padding: 25px;
+                    z-index: 2;
+                    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+                    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
                     ${devices.smartphone} {
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                         background-color: transparent;
                         box-shadow: none;
                         padding: 0;
-                        color: ${({ theme: { theme } }) =>
-                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                     }
 
                     ${devices.ipads} {
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                         background-color: transparent;
                         box-shadow: none;
                         padding: 0;
-                        color: ${({ theme: { theme } }) =>
-                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                     }
 
                     ${devices.tablet} {
+                        color: ${({ theme: { theme } }) =>
+                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                         background-color: transparent;
                         box-shadow: none;
                         padding: 0;
-                        color: ${({ theme: { theme } }) =>
-                            theme === themeList.light ? "#6b7280" : "#8892b0"};
                     }
 
                     p {
@@ -278,16 +276,11 @@ export const WorkSite = styled.section`
                         grid-template-columns: repeat(4, auto);
                     }
 
-                    /* ${devices.tablet} {
-                        display: grid;
-                        grid-template-columns: repeat(5, auto);
-                    } */
-
                     .text_list {
                         color: ${({ theme: { theme } }) =>
                             theme === themeList.light ? "#222" : "#cad0e0"};
-                        font-size: 13px;
                         white-space: nowrap;
+                        font-size: 13px;
                     }
                 }
 
@@ -303,7 +296,7 @@ export const WorkSite = styled.section`
                         font-size: 20px;
 
                         &:hover {
-                            color: #7c3aed;
+                            color: var(--colorMain);
                         }
                     }
                 }

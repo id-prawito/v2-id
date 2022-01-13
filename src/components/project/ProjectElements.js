@@ -28,23 +28,23 @@ export const ProjectSite = styled.section`
     }
 
     .item_nya {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        text-align: center;
-        background-color: #fff;
-        margin-bottom: 10px;
-        color: #000;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #fff;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: #000000;
+        height: 50px;
+        width: 50px;
     }
 
     .project_content {
         display: flex;
         flex-direction: column;
-        gap: 20px;
         align-items: center;
+        gap: 20px;
 
         .content_judul {
             display: flex;
@@ -53,9 +53,9 @@ export const ProjectSite = styled.section`
             gap: 20px;
 
             h1 {
-                color: #7c3aed;
-                font-size: 14px;
+                color: var(--colorMain);
                 font-weight: 500;
+                font-size: 14px;
 
                 ${devices.smartphone} {
                     letter-spacing: 0px;
@@ -71,9 +71,9 @@ export const ProjectSite = styled.section`
             }
 
             .big_heading {
-                margin: 0px;
-                font-size: 40px;
                 font-weight: 600;
+                font-size: 40px;
+                margin: 0px;
 
                 ${devices.smartphone} {
                     font-size: 30px;
@@ -116,45 +116,39 @@ export const ProjectSite = styled.section`
         }
 
         .card_item {
-            padding: 2rem 1.75rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             background-color: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "var(--darkCardComponent)"
                     : "var(--lightCardComponent)"};
             box-shadow: 0 10px 30px -15px rgb(2 12 27 / 70%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            cursor: pointer;
-            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+            padding: 2rem 1.75rem;
             border-radius: 6px;
-            gap: 20px;
             min-width: 320px;
+            cursor: pointer;
+            gap: 20px;
+            transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
             ${devices.smartphone} {
+                justify-content: flex-start;
                 min-width: 100%;
                 padding: 20px;
-                justify-content: flex-start;
             }
 
             ${devices.ipads} {
+                justify-content: flex-start;
                 min-width: 100%;
                 padding: 20px;
-                justify-content: flex-start;
             }
 
             ${devices.tablet} {
+                justify-content: flex-start;
                 min-width: 100%;
                 padding: 20px;
-                justify-content: flex-start;
             }
-
-            /* ${devices.laptop} {
-                min-width: 100%;
-                padding: 20px;
-                justify-content: flex-start;
-            } */
 
             &:hover {
                 transform: translateY(-7px);
@@ -162,14 +156,14 @@ export const ProjectSite = styled.section`
 
             .item_icon {
                 display: flex;
-                flex-direction: row;
                 justify-content: space-between;
+                flex-direction: row;
                 align-items: center;
                 width: 100%;
 
                 .icon {
-                    color: #fff;
                     font-size: 20px;
+                    color: var(--colorWhite);
 
                     ${devices.smartphone} {
                         font-size: 16px;
@@ -185,7 +179,7 @@ export const ProjectSite = styled.section`
 
                         a {
                             &:hover {
-                                color: #7c3aed;
+                                color: var(--colorMain);
                             }
                         }
                     }
@@ -193,7 +187,9 @@ export const ProjectSite = styled.section`
 
                 .icon_folder {
                     color: ${({ theme: { theme } }) =>
-                        theme === themeList.light ? "#fff" : "#7c3aed"};
+                        theme === themeList.light
+                            ? "var(--colorWhite)"
+                            : "var(--colorMain)"};
                     font-size: 28px;
 
                     ${devices.smartphone} {
@@ -205,9 +201,8 @@ export const ProjectSite = styled.section`
             .text_contect {
                 display: flex;
                 flex-direction: column;
-                /* justify-content: flex-start; */
-                gap: 10px;
                 width: 100%;
+                gap: 10px;
 
                 ${devices.smartphone} {
                     justify-content: space-between;
@@ -220,13 +215,13 @@ export const ProjectSite = styled.section`
                 }
 
                 .item_title {
-                    color: #fff;
+                    color: var(--colorWhite);
                     font-weight: 600;
                     font-size: 18px;
                     cursor: pointer;
 
                     &:hover {
-                        color: #7c3aed;
+                        color: var(--colorMain);
                     }
 
                     ${devices.smartphone} {
@@ -273,8 +268,8 @@ export const ProjectSite = styled.section`
     .button_hero {
         display: flex;
         flex-direction: row;
-        gap: 20px;
         margin-top: 20px;
+        gap: 20px;
 
         button {
             background: transparent;
@@ -283,22 +278,22 @@ export const ProjectSite = styled.section`
         .button_my-course {
             display: flex;
             align-items: center;
-            border: 0.2px solid #7c3aed;
+            border: 0.2px solid var(--colorMain);
             background-color: transparent;
-            color: #7c3aed;
-            gap: 10px;
+            color: var(--colorMain);
+            border-radius: 6px;
             padding: 10px 15px;
             max-height: 100%;
-            border-radius: 6px;
-            transition: 0.3s all ease;
             cursor: pointer;
             font-size: 12px;
+            gap: 10px;
+            transition: 0.3s all ease;
 
             &:hover {
-                transform: scale(1.05);
                 background-color: #7227f3;
                 transition: 0.3s all ease;
-                color: #fff;
+                transform: scale(1.05);
+                color: var(--colorWhite);
             }
 
             .item_content {

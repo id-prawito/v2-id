@@ -11,13 +11,13 @@ export const ContactSite = styled.section`
     padding: 0px;
 
     ${devices.smartphone} {
-        min-height: 0px;
         justify-content: center;
+        min-height: 0px;
     }
 
     ${devices.ipads} {
-        min-height: 0px;
         justify-content: center;
+        min-height: 0px;
     }
 
     .contact_content {
@@ -28,9 +28,9 @@ export const ContactSite = styled.section`
     }
 
     h1 {
-        color: #7c3aed;
-        font-size: 16px;
-        font-weight: 400;
+        color: var(--colorMain);
+        font-weight: 500;
+        font-size: 14px;
     }
 
     span {
@@ -38,10 +38,14 @@ export const ContactSite = styled.section`
     }
 
     p {
-        font-size: 14px;
+        color: ${({ theme: { theme } }) =>
+            theme === themeList.light
+                ? "var(--light-text-black)"
+                : "var(--dark-text-white)"};
+        text-align: center;
         max-width: 540px;
         line-height: 1.8;
-        text-align: center;
+        font-size: 14px;
 
         ${devices.smartphone} {
             font-size: 14px;
@@ -50,11 +54,6 @@ export const ContactSite = styled.section`
         ${devices.ipads} {
             font-size: 14px;
         }
-
-        color: ${({ theme: { theme } }) =>
-            theme === themeList.light
-                ? "var(--light-text-black)"
-                : "var(--dark-text-white)"};
     }
 
     .hero_container {
@@ -70,13 +69,13 @@ export const ContactSite = styled.section`
     }
 
     .big_heading {
-        margin: 0px;
-        font-size: 40px;
-        font-weight: 600;
         color: ${({ theme: { theme } }) =>
             theme === themeList.light
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
+        font-weight: 600;
+        font-size: 40px;
+        margin: 0px;
 
         ${devices.smartphone} {
             font-size: 30px;
@@ -90,33 +89,33 @@ export const ContactSite = styled.section`
     .button_hero {
         display: flex;
         flex-direction: row;
-        gap: 20px;
         margin-top: 20px;
+        gap: 20px;
 
         .button_my-course {
             display: flex;
             align-items: center;
-            border: 0.2px solid #7c3aed;
+            border: 0.2px solid var(--colorMain);
             background-color: transparent;
-            color: #7c3aed;
-            gap: 10px;
+            color: var(--colorMain);
             padding: 12px 20px;
-            max-height: 100%;
             border-radius: 6px;
-            transition: 0.3s all ease;
+            max-height: 100%;
             cursor: pointer;
             font-size: 14px;
+            gap: 10px;
+            transition: 0.3s all ease;
 
             ${devices.smartphone} {
-                font-size: 12px;
                 padding: 10px 15px;
+                font-size: 12px;
             }
 
             &:hover {
-                transform: scale(1.05);
                 background-color: #7227f3;
                 transition: 0.3s all ease;
-                color: #fff;
+                transform: scale(1.05);
+                color: #ffffff;
             }
 
             .item_content {
@@ -124,24 +123,5 @@ export const ContactSite = styled.section`
                 gap: 10px;
             }
         }
-    }
-
-    .item_hero {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .item_status {
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background-color: #fff;
-    }
-    .item_status_online {
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background-color: #4bbc03;
     }
 `;

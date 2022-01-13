@@ -237,4 +237,103 @@ const MediaSocial = ({ variants }) => {
     );
 };
 
+export const Header404 = () => {
+    const headerRef = useRef(null);
+    useEffect(() => {
+        const shrinkHeader = () => {
+            if (
+                document.body.scrollTop > 50 ||
+                document.documentElement.scrollTop > 50
+            ) {
+                headerRef.current.classList.add("shrink");
+            } else {
+                headerRef.current.classList.remove("shrink");
+            }
+        };
+        window.addEventListener("scroll", shrinkHeader);
+        return () => {
+            window.removeEventListener("scroll", shrinkHeader);
+        };
+    }, []);
+
+    const container = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 0.8,
+                staggerChildren: 0.4,
+            },
+        },
+    };
+
+    const item_nya = {
+        hidden: { y: -20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+        },
+    };
+
+    // const [isNavOpen, setIsNavOpen] = useState(false);
+    // const [isMobile, setIsMobile] = useState(
+    //     window.matchMedia("(max-width: 768px)").matches
+    // );
+
+    // useEffect(() => {
+    //     function disableScroll() {
+    //         document.body.style.overflow = "hidden";
+    //     }
+    //     function enableScroll() {
+    //         document.body.style.overflow = "";
+    //     }
+
+    //     // if (isNavOpen) {
+    //     //     disableScroll();
+    //     // } else {
+    //     //     enableScroll();
+    //     // }
+    // }, []);
+
+    // useEffect(() => {
+    //     window.addEventListener("resize", () => {
+    //         setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    //     });
+    // }, []);
+
+    return (
+        <HeaderSite ref={headerRef}>
+            <HeaderContainer>
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    className="header__logo_link"
+                >
+                    <div className="header__logo">
+                        <motion.div variants={item_nya}>
+                            <NavLinks
+                                to="home"
+                                smooth
+                                activeClass="active"
+                                spy={true}
+                            >
+                                <img
+                                    alt="logo_header"
+                                    src={logoSite}
+                                    className="logo__img"
+                                />
+                            </NavLinks>
+                        </motion.div>
+                        <motion.div variants={item_nya}>
+                            <ThemeSwitcher />
+                        </motion.div>
+                    </div>
+                </motion.div>
+            </HeaderContainer>
+        </HeaderSite>
+    );
+};
+
 export default Header;

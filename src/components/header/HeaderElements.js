@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import themeList from "../../config/themeList";
 import { Link } from "react-scroll";
 import { devices } from "../../assets/scss/_respondTo";
+import themeList from "../../config/themeList";
 
 export const HeaderSite = styled.header`
     display: flex;
@@ -49,15 +49,15 @@ export const HeaderContainer = styled.div`
 
     .menuIcon,
     .closeIcon {
-        cursor: pointer;
         display: flex;
         align-items: center;
         margin-right: -10px;
+        cursor: pointer;
         svg {
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light ? "#222B5F" : "#F3F1FE"};
-            width: 25px;
             height: 25px;
+            width: 25px;
         }
         &:hover {
             background-color: #8080803b;
@@ -77,12 +77,12 @@ export const HeaderContainer = styled.div`
     }
     .navOverlay {
         position: absolute;
+        background: #7227f3;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.2;
         left: 0;
         top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: #7227f3;
-        opacity: 0.2;
     }
 
     .header {
@@ -92,8 +92,8 @@ export const HeaderContainer = styled.div`
             flex-direction: row;
             align-items: center;
             height: 50px;
-            gap: 10px;
             width: 100%;
+            gap: 10px;
         }
 
         &__logo {
@@ -140,42 +140,40 @@ export const HeaderContainer = styled.div`
             gap: 8px;
 
             ${devices.smartphone} {
-                font-size: 14px;
                 font-weight: 500;
+                font-size: 14px;
             }
 
             ${devices.ipads} {
-                font-size: 15px;
                 font-weight: 500;
+                font-size: 15px;
             }
 
             .resume {
                 display: flex;
                 align-items: center;
-                background-color: #7c3aed;
-                color: #fff;
+                background-color: var(--colorMain);
+                border-radius: 6px;
                 padding: 8px 16px;
                 max-height: 100%;
-                border-radius: 6px;
-                transition: 0.3s all ease;
                 cursor: pointer;
+                color: #ffffff;
+                transition: 0.3s all ease;
 
                 &:hover {
-                    transform: scale(1.05);
                     background-color: #7227f3;
+                    transform: scale(1.05);
                 }
             }
 
             .text_menu {
-                cursor: pointer;
-
                 color: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--light-text-black)"
                         : "var(--dark-text-white)"};
-
+                cursor: pointer;
                 &:hover {
-                    color: #7c3aed;
+                    color: var(--colorMain);
                 }
 
                 ${devices.smartphone} {
@@ -209,38 +207,38 @@ export const HeaderContainer = styled.div`
             nav {
                 ${devices.smartphone} {
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
-                    position: fixed;
-                    width: 90%;
-                    max-width: 250px;
-                    top: 0;
-                    right: 0;
+                    flex-direction: column;
                     background-color: ${({ theme: { theme } }) =>
                         theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+                    max-width: 250px;
+                    overflow: hidden;
+                    position: fixed;
                     height: 100vh;
                     z-index: 100;
+                    width: 90%;
+                    right: 0;
+                    top: 0;
                     transform: translateX(100%);
                     transition: 0.3s ease-in-out transform;
-                    overflow: hidden;
                 }
 
                 ${devices.ipads} {
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
-                    position: fixed;
-                    width: 90%;
-                    max-width: 250px;
-                    top: 0;
-                    right: 0;
+                    flex-direction: column;
                     background-color: ${({ theme: { theme } }) =>
                         theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+                    max-width: 250px;
+                    overflow: hidden;
+                    position: fixed;
                     height: 100vh;
                     z-index: 100;
+                    width: 90%;
+                    right: 0;
+                    top: 0;
                     transform: translateX(100%);
                     transition: 0.3s ease-in-out transform;
-                    overflow: hidden;
                 }
 
                 ul {
@@ -269,11 +267,11 @@ export const HeaderContainer = styled.div`
 
             .color_icon {
                 display: flex;
-                font-size: 10px;
                 color: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--light-text-black)"
                         : "var(--dark-text-white)"};
+                font-size: 10px;
 
                 ${devices.smartphone} {
                     display: none;
@@ -287,13 +285,13 @@ export const HeaderContainer = styled.div`
     }
 
     .media_social {
-        width: 40px;
         position: fixed;
+        color: #a8b2d1;
+        width: 40px;
         bottom: 0px;
-        left: 40px;
         right: auto;
         z-index: 10;
-        color: #a8b2d1;
+        left: 40px;
 
         ${devices.smartphone} {
             display: none;
@@ -305,52 +303,52 @@ export const HeaderContainer = styled.div`
 
         .item_media {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-box-align: center;
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "var(--light-text-grey)"
                     : "var(--dark-text-white)"};
-            flex-direction: column;
-            -webkit-box-align: center;
-            align-items: center;
-            margin: 0px;
-            padding: 0px;
             list-style: none;
             font-size: 20px;
+            padding: 0px;
+            margin: 0px;
 
             .item_li {
-                padding: 10px;
                 transition: 0.3s all ease;
+                padding: 10px;
 
                 &:hover {
-                    color: #7227f3;
                     transform: translateY(-5px);
                     transition: 0.3s all ease;
+                    color: #7227f3;
                 }
             }
 
             &::after {
                 content: "";
-                display: block;
-                width: 1px;
-                height: 90px;
-                margin: 0px auto;
-                margin-top: 20px;
                 background-color: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--light-text-grey)"
                         : "var(--dark-text-white)"};
+                margin: 0px auto;
+                margin-top: 20px;
+                display: block;
+                height: 90px;
+                width: 1px;
             }
         }
     }
 
     .media_social_right {
-        width: 40px;
         position: fixed;
+        color: #a8b2d1;
+        width: 40px;
         bottom: 0px;
         right: 40px;
-        left: auto;
         z-index: 10;
-        color: #a8b2d1;
+        left: auto;
 
         ${devices.smartphone} {
             display: none;
@@ -362,40 +360,40 @@ export const HeaderContainer = styled.div`
 
         .item_media {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-box-align: center;
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "var(--light-text-grey)"
                     : "var(--dark-text-white)"};
-            flex-direction: column;
-            -webkit-box-align: center;
-            align-items: center;
-            margin: 0px;
-            padding: 0px;
             list-style: none;
             font-size: 20px;
+            padding: 0px;
+            margin: 0px;
 
             .item_li {
-                padding: 10px;
                 transition: 0.3s all ease;
+                padding: 10px;
 
                 &:hover {
-                    color: #7227f3;
                     transform: translateY(-5px);
                     transition: 0.3s all ease;
+                    color: #7227f3;
                 }
             }
 
             &::after {
                 content: "";
-                display: block;
-                width: 1px;
-                height: 90px;
-                margin: 0px auto;
-                margin-top: 20px;
                 background-color: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--light-text-grey)"
                         : "var(--dark-text-white)"};
+                margin: 0px auto;
+                margin-top: 20px;
+                display: block;
+                height: 90px;
+                width: 1px;
             }
         }
     }

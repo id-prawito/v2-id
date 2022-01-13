@@ -8,8 +8,8 @@ export const ExperienceSite = styled.section`
     flex-direction: column;
     align-items: center;
     min-height: 70vh;
-    padding: 0px;
     max-width: 800px;
+    padding: 0px;
 
     ${devices.smartphone} {
         min-height: 0px;
@@ -19,15 +19,11 @@ export const ExperienceSite = styled.section`
         min-height: 0px;
     }
 
-    /* ${devices.desktops} {
-        min-height: 0px;
-    } */
-
     .content {
         display: flex;
         flex-direction: column;
-        gap: 30px;
         width: 100%;
+        gap: 30px;
 
         ${devices.smartphone} {
             padding: 80px 25px;
@@ -50,36 +46,35 @@ export const ExperienceSite = styled.section`
 
     .expe_content {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        flex-direction: column;
         width: 100%;
+        gap: 20px;
 
         .big_heading {
-            margin: 0px;
-            font-size: 40px;
-            font-weight: 600;
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "var(--light-text-black)"
                     : "var(--dark-text-white)"};
-
+            font-weight: 600;
+            font-size: 40px;
+            margin: 0px;
             ${devices.smartphone} {
                 font-size: 30px;
             }
         }
 
         h1 {
-            color: #7c3aed;
-            font-size: 14px;
+            color: var(--colorMain);
             font-weight: 500;
+            font-size: 14px;
         }
     }
 
     .rc-tabs {
         border: none !important;
-        width: 100%;
         height: 300px;
+        width: 100%;
 
         ${devices.smartphone} {
             height: 100%;
@@ -92,25 +87,25 @@ export const ExperienceSite = styled.section`
         }
     }
     .rc-tabs-tab {
-        padding: 5px;
-        text-transform: capitalize;
-        background: transparent;
         color: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "#7c3aed" : "#8892b0"};
-        padding: 8px 30px;
-        font-size: 14px;
+            theme === themeList.light ? "var(--colorMain)" : "#8892b0"};
         border-right: 2px solid #233554;
         border-radius: 6px 0px 0px 6px;
+        text-transform: capitalize;
+        background: transparent;
+        padding: 8px 30px;
+        font-size: 14px;
+        padding: 5px;
 
         ${devices.smartphone} {
-            border-radius: 0px 0px 0px 0px;
             border-bottom: 2px solid #233554;
+            border-radius: 0px 0px 0px 0px;
             border-right: 0px;
         }
 
         ${devices.ipads} {
-            border-radius: 0px 0px 0px 0px;
             border-bottom: 2px solid #233554;
+            border-radius: 0px 0px 0px 0px;
             border-right: 0px;
         }
 
@@ -120,7 +115,7 @@ export const ExperienceSite = styled.section`
                     ? "var(--darkTab)"
                     : "var(--lightTab)"};
             color: ${({ theme: { theme } }) =>
-                theme === themeList.light ? "#fff" : "#7c3aed"};
+                theme === themeList.light ? "#fff" : "var(--colorMain)"};
         }
     }
     .rc-tabs-tab .rc-tabs-tab-btn {
@@ -128,24 +123,24 @@ export const ExperienceSite = styled.section`
     }
     .rc-tabs-tab.rc-tabs-tab-active {
         color: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "#444444" : "#7c3aed"};
+            theme === themeList.light ? "#444444" : "var(--colorMain)"};
     }
     .rc-tabs-ink-bar {
-        background: #7c3aed !important;
+        background: var(--colorMain) !important;
     }
     .rc-tabs-content-holder {
         background: transparent;
-        width: 500px;
         padding: 10px 30px;
+        width: 500px;
 
         ${devices.smartphone} {
-            width: 100%;
             padding: 0px;
+            width: 100%;
         }
 
         ${devices.ipads} {
-            width: 100%;
             padding: 0px;
+            width: 100%;
         }
     }
     .rc-tabs-content {
@@ -164,38 +159,38 @@ export const ExperienceSite = styled.section`
                 font-weight: 500;
 
                 .company {
-                    color: #7c3aed;
+                    color: var(--colorMain);
                 }
             }
 
             p {
-                font-size: 12px;
-                font-weight: 300;
-                letter-spacing: 1.2px;
                 color: ${({ theme: { theme } }) =>
                     theme === themeList.light
                         ? "var(--light-text-black)"
                         : "var(--dark-text-white)"};
+                letter-spacing: 1.2px;
+                font-weight: 300;
+                font-size: 12px;
             }
 
             .text_skill {
-                color: #6b7280;
-                font-size: 14px;
-                font-weight: 400;
                 display: flex;
-                gap: 1rem;
                 flex-direction: column;
+                font-weight: 400;
                 margin-top: 15px;
+                font-size: 14px;
+                color: #6b7280;
+                gap: 1rem;
 
                 .icon {
-                    width: 20px;
                     margin-top: 6px;
+                    width: 20px;
                 }
 
                 .text_keterangan {
+                    line-height: 1.8;
                     font-size: 14px;
                     width: 100%;
-                    line-height: 1.8;
                 }
 
                 li {
@@ -204,7 +199,7 @@ export const ExperienceSite = styled.section`
                     gap: 14px;
 
                     svg {
-                        color: #7c3aed;
+                        color: var(--colorMain);
                         width: 100%;
                     }
                 }

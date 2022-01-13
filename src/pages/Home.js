@@ -5,16 +5,20 @@ import Contact from "../components/contact";
 import Experience from "../components/experience";
 import Work from "../components/work";
 import Project from "../components/project";
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 const Home = () => {
     return (
         <>
+            <Header />
             <Hero />
             <About />
             <Experience />
             <Work />
             <Project />
             <Contact />
+            <Footer />
         </>
     );
 };

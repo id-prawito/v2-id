@@ -302,7 +302,7 @@ export const MEDIA_SOSIAL = [
 ];
 
 export const HERO_DATA = {
-    text_small: "Hi, name is",
+    text_small: "Hi, my name is",
     big_heading: "Prawito (Boy).",
     big_heading2: "I build things for the web.",
     description:

@@ -4,8 +4,7 @@ import { useContext } from "react";
 import GlobalStyles from "../config/GlobalStyles";
 import ThemeContext from "../config/ThemeContext";
 import RoutesSite from "../config/RouterSite";
-import Footer from "../components/footer";
-import Header from "../components/header";
+
 import "./app.scss";
 
 function App() {
@@ -15,9 +14,7 @@ function App() {
             <Route>
                 <ThemeProvider theme={{ theme }}>
                     <GlobalStyles />
-                    <Header />
                     <RoutesSite />
-                    <Footer />
                 </ThemeProvider>
             </Route>
         </BrowserRouter>

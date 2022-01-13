@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import themeList from "../../config/themeList";
 import { devices } from "../../assets/scss/_respondTo";
+import themeList from "../../config/themeList";
 
 export const AboutSite = styled.section`
-    max-width: 930px;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    min-height: 150vh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 150vh;
+    max-width: 930px;
+    padding: 0;
 
     ${devices.smartphone} {
-        min-height: 0px;
         padding: 70px 0px;
+        min-height: 0px;
     }
 
     ${devices.ipads} {
@@ -21,21 +21,21 @@ export const AboutSite = styled.section`
     }
 
     ${devices.laptop} {
-        max-width: 100%;
         padding: 50px 0px;
+        max-width: 100%;
     }
 
     ${devices.desktops} {
-        min-height: 0px;
         padding: 140px 0px;
+        min-height: 0px;
     }
 
     .pembungkus_about {
         display: flex;
-        gap: 80px;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        gap: 80px;
 
         ${devices.smartphone} {
             padding: 20px 25px;
@@ -71,17 +71,17 @@ export const AboutSite = styled.section`
         }
 
         h1 {
-            color: #7c3aed;
-            font-size: 14px;
+            color: var(--colorMain);
             font-weight: 500;
+            font-size: 14px;
         }
     }
 
     .content_about {
         display: flex;
         flex-direction: column;
-        gap: 20px;
         width: 50%;
+        gap: 20px;
 
         ${devices.smartphone} {
             width: 100%;
@@ -109,21 +109,21 @@ export const AboutSite = styled.section`
     }
 
     .big_heading_about {
-        margin: 0px;
-        font-size: 40px;
-        font-weight: 600;
         color: ${({ theme: { theme } }) =>
             theme === themeList.light
                 ? "var(--light-text-black)"
                 : "var(--dark-text-white)"};
+        font-weight: 600;
+        font-size: 40px;
+        margin: 0px;
 
         ${devices.smartphone} {
             font-size: 30px;
         }
 
         span {
+            color: var(--colorMain);
             font-size: 40px;
-            color: #7c3aed;
 
             ${devices.smartphone} {
                 font-size: 30px;
@@ -132,12 +132,12 @@ export const AboutSite = styled.section`
     }
 
     .text_skill {
-        color: #6b7280;
-        font-size: 15px;
-        font-weight: 600;
         display: flex;
-        gap: 1rem;
         flex-direction: column;
+        font-weight: 600;
+        font-size: 15px;
+        color: #6b7280;
+        gap: 1rem;
 
         li {
             display: flex;
@@ -145,14 +145,14 @@ export const AboutSite = styled.section`
             gap: 14px;
 
             svg {
+                color: var(--colorMain);
                 font-size: 20px;
-                color: #7c3aed;
             }
 
             span {
-                color: #6b7280;
-                font-size: 15px;
                 font-weight: 600;
+                font-size: 15px;
+                color: #6b7280;
             }
         }
     }
@@ -162,12 +162,12 @@ export const AboutSite = styled.section`
             theme === themeList.light
                 ? "var(--darkCardComponent)"
                 : "var(--lightCardComponent)"};
-        padding: 20px;
         border-radius: 0.75rem 0.75rem 0 0.75rem;
-        height: 100%;
-        cursor: pointer;
-        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
         max-width: 215px;
+        cursor: pointer;
+        padding: 20px;
+        height: 100%;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
         &:hover {
             transform: scale(1.08);
@@ -175,9 +175,9 @@ export const AboutSite = styled.section`
     }
 
     .item_logo {
-        padding: 10px;
         border-radius: 0.75rem 0.75rem 0 0.75rem;
         display: inline-block;
+        padding: 10px;
 
         img {
             width: 32px;
@@ -187,8 +187,8 @@ export const AboutSite = styled.section`
     .content_card {
         display: grid;
         grid-template-areas: "myArea myArea2";
-        gap: 25px;
         width: 50%;
+        gap: 25px;
 
         ${devices.smartphone} {
             width: 100%;
@@ -199,8 +199,8 @@ export const AboutSite = styled.section`
         }
 
         ${devices.tablet} {
-            width: 100%;
             justify-content: center;
+            width: 100%;
         }
 
         ${devices.laptop} {
@@ -213,29 +213,29 @@ export const AboutSite = styled.section`
 
         .myArea2 {
             grid-area: myArea2;
-            margin-top: 20px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
-            height: 100%;
             margin-top: 40px;
+            margin-top: 20px;
+            height: 100%;
+            gap: 25px;
 
             .item {
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: space-between;
                 height: 100%;
+                width: 100%;
 
                 h2 {
-                    font-size: 18px;
                     font-weight: 600;
+                    font-size: 18px;
                 }
 
                 p {
-                    width: 100%;
                     font-size: 12px;
+                    width: 100%;
                 }
             }
         }
@@ -244,25 +244,25 @@ export const AboutSite = styled.section`
             grid-area: myArea;
             display: flex;
             flex-direction: column;
-            gap: 25px;
             height: 100%;
+            gap: 25px;
 
             .item {
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: space-between;
                 height: 100%;
+                width: 100%;
 
                 h2 {
-                    font-size: 18px;
                     font-weight: 600;
+                    font-size: 18px;
                 }
 
                 p {
-                    width: 100%;
                     font-size: 12px;
+                    width: 100%;
                 }
             }
         }
@@ -271,26 +271,26 @@ export const AboutSite = styled.section`
     .about_tech {
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
         width: 100%;
         gap: 40px;
 
         .tech_heading {
-            font-size: 20px;
-            font-weight: 600;
             color: ${({ theme: { theme } }) =>
                 theme === themeList.light
                     ? "var(--light-text-black)"
                     : "var(--dark-text-white)"};
+            font-weight: 600;
+            font-size: 20px;
         }
 
         .tech_content {
             display: grid;
             grid-template-columns: repeat(5, auto);
             width: 1000px;
-            gap: 15px;
             row-gap: 20px;
+            gap: 15px;
 
             ${devices.smartphone} {
                 grid-template-columns: repeat(2, auto);
@@ -319,9 +319,9 @@ export const AboutSite = styled.section`
 
             .pembungkus {
                 cursor: pointer;
-                transition: 350ms ease-in-out;
                 height: 120px;
                 width: 100%;
+                transition: 350ms ease-in-out;
 
                 &:hover {
                     .card_background {
@@ -330,8 +330,8 @@ export const AboutSite = styled.section`
                     }
 
                     .card_contentnya img {
-                        transition: 350ms ease-in-out;
                         transform: rotate(4deg) scale(1.4);
+                        transition: 350ms ease-in-out;
                     }
                 }
             }
@@ -348,12 +348,12 @@ export const AboutSite = styled.section`
                                 : "var(--darkCardComponent)"}
                         100%
                 );
-                width: 100%;
                 height: calc(100% + 5px);
                 margin-bottom: -125px;
                 border-radius: 12px;
-                z-index: -2;
                 position: relative;
+                z-index: -2;
+                width: 100%;
                 transition: 350ms ease-in-out;
             }
 
@@ -362,28 +362,28 @@ export const AboutSite = styled.section`
                     theme === themeList.light
                         ? "var(--darkCardComponent)"
                         : "var(--lightCardComponent)"};
-                height: 120px;
-                width: 100%;
-                border-radius: 10px;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                z-index: -1;
-                position: relative;
                 flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+                position: relative;
+                height: 120px;
+                padding: 20px;
+                width: 100%;
+                z-index: -1;
                 gap: 10px;
                 transition: 350ms ease-in-out;
-                padding: 20px;
 
                 img {
-                    max-width: 50px;
                     max-height: 50px;
+                    max-width: 50px;
                     transition: 350ms ease-in-out;
                 }
 
                 .text_tech {
-                    font-size: 14px;
                     font-weight: 500;
+                    font-size: 14px;
                 }
             }
         }
