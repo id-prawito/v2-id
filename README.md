@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+<div align="center">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/71351196/149496320-5d85d0b0-2941-4bab-9726-e0ab2f70866a.png" width="100" />
+</div>
+<h1 align="center">
+  prawito | v2-id
+</h1>
+<p align="center">
+  The second iteration of <a href="https://id-prawito.github.io/v2-id/" target="_blank">id-prawito.github.io/v2-id/</a> built with <a href="https://reactjs.org" target="_blank">React Js</a> and hosted with <a href="https://pages.github.com" target="_blank">Github Pages</a>
+</p>
+<p align="center">
+  Previous iterations:
+  <a href="https://portfolio-id.vercel.app" target="_blank">v1</a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![demo](https://user-images.githubusercontent.com/71351196/149496213-f20e2e8a-6924-4c00-a96e-d0dc17bc0b41.png)
 
-## Available Scripts
+## How To Use 🔧
 
-In the project directory, you can run:
+From your command line, first clone Simplefolio:
 
-### `npm start`
+```bash
+# Clone the repository
+$ git clone https://github.com/id-prawito/v2-id.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Move into the repository
+$ cd v2-id
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Remove the current origin repository
+$ git remote remove origin
+```
 
-### `npm test`
+After that, you can install the dependencies either using NPM or Yarn.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Using NPM: Simply run the below commands.
 
-### `npm run build`
+```bash
+# Install dependencies
+$ npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start the development server
+$ npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Using Yarn: Be aware of that you'll need to delete the `package-lock.json` file before executing the below commands.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Install dependencies
+$ yarn
 
-### `npm run eject`
+# Start the development server
+$ yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**NOTE**:
+If your run into issues installing the dependencies with NPM, use this below command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Install dependencies with all permissions
+$ sudo npm install --unsafe-perm=true --allow-root
+```
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠 Installation & Set Up
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Install the Gatsby CLI
 
-## Learn More
+   ```sh
+   npm install -g gatsby-cli
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   nvm install
+   ```
 
-### Code Splitting
+3. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```sh
+   yarn
+   ```
 
-### Analyzing the Bundle Size
+4. Start the development server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```sh
+   npm start
+   ```
 
-### Making a Progressive Web App
+## 🚀 Building and Running for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Generate a full static production build
 
-### Advanced Configuration
+   ```sh
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Preview the site as it will appear once deployed
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```sh
+   npm run serve
+   ```
