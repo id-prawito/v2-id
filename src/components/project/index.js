@@ -18,10 +18,14 @@ const Project = () => {
         setVisible((prevValue) => prevValue + 3);
     };
 
+    const toGithub = () => {
+        window.open("https://github.com/id-prawito");
+    };
+
     const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
     const showLessItems = () => {
-        setVisible(6);
+        setVisible(3);
         scrollToRef(myRef);
     };
 
@@ -167,15 +171,28 @@ const Project = () => {
                     </motion.div>
 
                     <motion.div variants={item_nya} className="button_hero">
-                        {repo.length <= visible_item ? (
-                            <button onClick={showLessItems}>
-                                <div className="button_my-course">
-                                    <div className="item_content">
-                                        <FaRegThumbsUp />
-                                        Show Less
+                        {9 <= visible_item ? (
+                            <>
+                                <button onClick={showLessItems}>
+                                    <div className="button_my-course">
+                                        <div className="item_content">
+                                            <FaRegThumbsUp />
+                                            Show Less
+                                        </div>
                                     </div>
-                                </div>
-                            </button>
+                                </button>
+                                {repo.length > 9 ? (
+                                    <button onClick={toGithub}>
+                                        <div className="button_my-course">
+                                            <div className="item_content">
+                                                <FaRegThumbsUp />
+                                                See More on Github (
+                                                {repo.length} Repo)
+                                            </div>
+                                        </div>
+                                    </button>
+                                ) : null}
+                            </>
                         ) : (
                             <button onClick={showMoreItems}>
                                 <div className="button_my-course">
