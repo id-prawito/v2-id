@@ -95,7 +95,7 @@ export const ExperienceSite = styled.section`
         background: transparent;
         padding: 8px 30px;
         font-size: 14px;
-        padding: 5px;
+        padding: 5px 20px;
 
         ${devices.smartphone} {
             border-bottom: 2px solid #233554;
