@@ -1,7 +1,6 @@
 import { FiExternalLink, FiGithub, FiFolder } from "react-icons/fi";
 import React, { useEffect, useRef, useState } from "react";
 import { FaRegThumbsUp } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import axios from "axios";
@@ -128,14 +127,14 @@ const Project = () => {
                                                               {item.homepage ===
                                                                   null ||
                                                               "" ? null : (
-                                                                  <Link
-                                                                      to={`//${item.homepage}`}
+                                                                  <a
+                                                                      href={`${item.homepage}`}
                                                                       target="_blank"
                                                                       rel="noopener noreferrer"
                                                                       className="links"
                                                                   >
                                                                       <FiExternalLink />
-                                                                  </Link>
+                                                                  </a>
                                                               )}
                                                           </div>
                                                       </div>
@@ -143,7 +142,9 @@ const Project = () => {
                                                   <div className="text_contect">
                                                       <h3 className="item_title">
                                                           <a
-                                                              href="https://id-prawito.github.io/pokedex-id/"
+                                                              href={
+                                                                  item.html_url
+                                                              }
                                                               target="_blank"
                                                               rel="noopener noreferrer"
                                                           >
