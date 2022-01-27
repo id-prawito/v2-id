@@ -59,7 +59,7 @@ const Footer = () => {
                     target="_blank"
                 >
                     © All rights reserved. Made with React JS | Designed & Built
-                    by Prawito (Boy).
+                    by Prawito.
                     <div className="github_stats">
                         <span>
                             <FaRegStar />

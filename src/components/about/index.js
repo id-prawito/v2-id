@@ -6,7 +6,7 @@ import { AboutSite } from "./AboutElements";
 
 const About = () => {
     const controls = useAnimation();
-    const [ref, inView] = useInView({ threshold: 0.1 });
+    const [ref, inView] = useInView({ threshold: 0.3 });
 
     useEffect(() => {
         if (inView) {
