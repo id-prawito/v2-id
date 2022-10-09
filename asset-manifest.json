@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/v2-id/static/css/main.eda3323c.css",
-    "main.js": "/v2-id/static/js/main.737f50e1.js",
-    "static/media/disney-plus.PNG": "/v2-id/static/media/disney-plus.ff0bfb2909b9be7dd5b2.PNG",
+    "main.js": "/v2-id/static/js/main.e6813cd4.js",
+    "static/media/disney-plus.png": "/v2-id/static/media/disney-plus.ff0bfb2909b9be7dd5b2.png",
+    "static/media/arthamas.jpeg": "/v2-id/static/media/arthamas.ce04479900e52200c950.jpeg",
     "static/media/cv_prawito.pdf": "/v2-id/static/media/cv_prawito.62769c46a2db417ecdd2.pdf",
-    "static/media/spk-promethee.PNG": "/v2-id/static/media/spk-promethee.96412893015717ab26bd.PNG",
-    "static/media/pokedex-id.PNG": "/v2-id/static/media/pokedex-id.db351033f7de4e505a03.PNG",
+    "static/media/spk-promethee.png": "/v2-id/static/media/spk-promethee.96412893015717ab26bd.png",
+    "static/media/pokedex-id.png": "/v2-id/static/media/pokedex-id.db351033f7de4e505a03.png",
     "static/media/mySQL.svg": "/v2-id/static/media/mySQL.4c50926040e5a77a27dba211addc08e3.svg",
     "static/media/reactJS.svg": "/v2-id/static/media/reactJS.7098e2714733fed1ce8cdb90d51c4289.svg",
     "static/media/photoshop.svg": "/v2-id/static/media/photoshop.21b3c1e00213c9613773022511f98503.svg",
@@ -23,13 +24,14 @@
     "static/media/html.svg": "/v2-id/static/media/html.87f3f64abde68319b96661c04229b687.svg",
     "static/media/figma.svg": "/v2-id/static/media/figma.25abb591c3b89b3fa15743b91482f4a6.svg",
     "static/media/javascript.svg": "/v2-id/static/media/javascript.218515feb76f692771fe00cfeadc46c8.svg",
+    "static/media/angular.svg": "/v2-id/static/media/angular.28ae4f3c6c193d04113e4767a73b86bc.svg",
     "static/media/firebase.svg": "/v2-id/static/media/firebase.82a35fc0b90d124a8e7333989f767fd3.svg",
     "static/media/vueJs.svg": "/v2-id/static/media/vueJs.f1fd23be1db9361fbcd81511fe862b08.svg",
     "main.eda3323c.css.map": "/v2-id/static/css/main.eda3323c.css.map",
-    "main.737f50e1.js.map": "/v2-id/static/js/main.737f50e1.js.map"
+    "main.e6813cd4.js.map": "/v2-id/static/js/main.e6813cd4.js.map"
   },
   "entrypoints": [
     "static/css/main.eda3323c.css",
-    "static/js/main.737f50e1.js"
+    "static/js/main.e6813cd4.js"
   ]
 }
