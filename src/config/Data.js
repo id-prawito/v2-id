@@ -210,8 +210,8 @@ export const EXPE_DATA = {
   big_heading: "Where from I've Experienced",
   expe: [
     {
-      tab: "Work Contract",
-      key: 6,
+      tab: "Fulltime",
+      key: 1,
       heading: "WEB DEVELOPER ",
       to: "https://www.linkedin.com/company/bank-mandiri/?originalSubdomain=id",
       text_expe: "@ PT. Bank Mandiri (Persero)",
@@ -224,8 +224,8 @@ export const EXPE_DATA = {
       ],
     },
     {
-      tab: "Work Contract",
-      key: 5,
+      tab: "Fulltime",
+      key: 2,
       heading: "FRONTEND DEVELOPER ",
       to: "www.facebook.com",
       text_expe: "@ Prudential Indonesia",
@@ -239,7 +239,7 @@ export const EXPE_DATA = {
     },
     {
       tab: "Training II",
-      key: 1,
+      key: 3,
       heading: "FRONTEND IT PERBANKAN ",
       to: "www.facebook.com",
       text_expe: "@ Thematic Academy DTS KOMINFO",
@@ -257,7 +257,7 @@ export const EXPE_DATA = {
     },
     {
       tab: "Internship",
-      key: 2,
+      key: 4,
       heading: "WEB DEVELOPER ",
       to: "www.facebook.com",
       text_expe: "@ PT. KAI Indonesia",
@@ -271,7 +271,7 @@ export const EXPE_DATA = {
     },
     {
       tab: "Training I",
-      key: 3,
+      key: 5,
       heading: "BIG DATA ANALYTICS ",
       to: "www.facebook.com",
       text_expe: "@ Fresh Graduate Academy DTS KOMINFO",
@@ -289,7 +289,7 @@ export const EXPE_DATA = {
     },
     {
       tab: "Certificate",
-      key: 4,
+      key: 6,
       heading: "ORACLE ACADEMY ",
       to: "www.facebook.com",
       text_expe: "@ Oracle | Diponegoro University",
