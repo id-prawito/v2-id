@@ -10,7 +10,7 @@ import "./app.scss";
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="v2-id">
       <Route>
         <ThemeProvider theme={{ theme }}>
           <GlobalStyles />
