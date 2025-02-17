@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.eda3323c.css",
-    "main.js": "/static/js/main.029e8ac1.js",
+    "main.js": "/static/js/main.80e8ae75.js",
     "static/media/disney-plus.png": "/static/media/disney-plus.ff0bfb2909b9be7dd5b2.png",
     "static/media/arthamas.jpeg": "/static/media/arthamas.ce04479900e52200c950.jpeg",
     "static/media/cv_prawito.pdf": "/static/media/cv_prawito.3aa3cc17947ab99bf798.pdf",
@@ -28,10 +28,10 @@
     "static/media/firebase.svg": "/static/media/firebase.82a35fc0b90d124a8e7333989f767fd3.svg",
     "static/media/vueJs.svg": "/static/media/vueJs.f1fd23be1db9361fbcd81511fe862b08.svg",
     "main.eda3323c.css.map": "/static/css/main.eda3323c.css.map",
-    "main.029e8ac1.js.map": "/static/js/main.029e8ac1.js.map"
+    "main.80e8ae75.js.map": "/static/js/main.80e8ae75.js.map"
   },
   "entrypoints": [
     "static/css/main.eda3323c.css",
-    "static/js/main.029e8ac1.js"
+    "static/js/main.80e8ae75.js"
   ]
 }
