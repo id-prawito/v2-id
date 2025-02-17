@@ -150,7 +150,7 @@ export const ABOUT_DATA = {
   text_small: "Being a frontend developer / frontend engineer.",
   big_heading: "Who am I <span>&</span> how did i get here.",
   text_description:
-    "Hello, i am Prawito . I am from Indonesia who codes for fun, i have been in coding since 2016, when i was studied in Diponegoro University and I am graduated in June 2021. I have been using JavaScripts (Node JS and React Js (Client Side)) for 1.5 year. Now I'm trying to produce a lots of open source project and working as freelancer.",
+    "Hello, i am Prawito . I am from Indonesia who codes for fun, i have been in coding since 2016, when i was studied in Diponegoro University and I am graduated in June 2021. I have been using JavaScripts (Node JS and React Js (Client Side)) for 3 year. Now I'm trying to produce a lots of open source project and working as freelancer.",
   skill: [
     { icon: FaCheckCircle, text: "JavaScript (Node & Client Side)" },
     { icon: FaCheckCircle, text: "TypeScript, PHP" },
